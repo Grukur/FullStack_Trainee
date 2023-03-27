@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NIMRODEL Restaurant y Pub</title>
+        <link rel="icon" href="./assets/img/n.png"> <!-- Image in title bar --> 
+</head>
+
+<body>
+    <a id="upper"></a>
+    <!-- Starting img and links -->
+    <div style="margin: 30px;">
+        <img src="./assets/img/n.png" alt="" width="300" height="300">
+
+        <li>Nuestros productos</li>
+        <li>Sobre nosotros</li>
+        <li><a href="#contact-form">Comuniquemonos</a></li>
+        <li><a href="reserve.html">Reserva</a></li>
+    </div>
+    
+    <!-- Products -->
+    <section>
+        <h1 style="font-size: x-large;">Nimrodel Pub Restaurant</h1>
+    
+        <div>
+            <h2>Destacados de la semana</h2>
+            <img src="https://picsum.photos/id/685/500/400" alt="">
+            <h3>GASEOSAS</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+    
+        <div>
+            <img src="https://picsum.photos/id/686/500/400" alt="">
+            <h3>TABLAS</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+    
+        <div>
+            <img src="https://picsum.photos/id/687/500/400" alt="">
+            <h3>SHOPCERVEZA</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+    </section>
+
+    <!-- Contact form -->
+    <div>
+        <a id="contact-form"></a>
+        <form action="printer.html" style="display: inline-block;">
+
+            <h1 style="font-size: xx-large;">Formulario</h1>
+
+            <div style="text-align: start;">
+                <label for="nombre">Nombre</label>                
+                <input type="text" name="nombre" placeholder="Darold Trench" required>
+                <br><br>
+
+                <label for="correo">Correo</label>                
+                <input type="email" name="correo" placeholder="darold@correo.com" required>
+                <br><br>
+
+                <label for="phone">Teléfono</label>                
+                <input type="number" name="phone" placeholder="9 1234 5678" required>
+                <br><br>
+
+                <label for="reason">Motivo</label>                
+                <select name="reason" id="reason" required>
+                    <option value=""></option>
+                    <option value="Felicitaciones">Felicitaciones</option>
+                    <option value="Reclamos">Reclamos</option>
+                    <option value="Consultas">Consultas</option>
+                    <option value="Sugerencias">Sugerencias</option>
+                </select>
+                <br><br>
+
+                <label for="comment"></label>                
+                <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+                <br><br>
+
+                <button>Enviar</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Reserve Button -->
+    <div>
+        <br>
+        <button><a href="reserve.html">Reservas</a></button>
+        <button><a href="#upper">Inicio</a></button>
+    </div>
+</body>
+
+<footer>
+    <div>
+        <p>Todos los derechos reservados 
+            <img style="display: inline-block; height: 100%; vertical-align: middle;" src="./assets/img/download.jfif" alt="" width="15">
+        </p>
+    </div>
+</footer>
+    
+</html>

@@ -1,0 +1,14 @@
+
+
+.father-box {
+    display: flex;
+    flex-flow: row nowrap;
+    border: double black;
+    justify-content: center;
+    
+}
+
+.father-box div {
+    border: thin solid black;
+}
+
