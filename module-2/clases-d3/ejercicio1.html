@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea</title>
+    <link rel="icon" href="./assets/img/worker.png">
+</head>
+
+<body style="text-align: center;">
+    <!-- Form frame -->
+    <section style="margin: 5vw 25vw; display: inline-block;">
+        <fieldset>
+            <legend style="text-align: start; font-size: larger; font-weight: 700;
+                        font-family: 'Courier New', Courier, monospace;">Trabajo
+            </legend>
+
+            <!-- Form -->
+            <form style="text-align: start;" action="">
+                <br>
+                
+                <!-- Input fields -->
+                <label for="name">Nombre </label>
+                <input type="text" name="name" placeholder="Jaime Soto" 
+                        required title="Ingrese su nombre y apellido"
+                        pattern="[a-z]+[\s]{1}?([a-z]{2,})">
+                <br><br>
+
+                <label for="phone">Telefono </label>
+                <input type="text" name="phone" placeholder="+569 4444 3333" value="+56"
+                        required pattern="\+569{1}[\s]?(\d{4,4})[\s]?(\d{4,4})$">
+                <br><br>
+
+                <label for="creditCard">Tarjeta de Credito </label>
+                <input type="search" name="creditCard" id="creditCard" placeholder="1111 2222 3333 4444" 
+                        onkeypress="val()" pattern="^\d{4}[\s\-]?\d{4}[\s\-]?\d{4}[\s\-]?\d{4}$" required>               
+                
+                <img style="display: inline-block; height: 100%; vertical-align: middle; margin: 0px 10px;"
+                     src='./assets/img/creditCard-any.png' alt="" width="40px" id="card">
+                <br><br>
+
+                <label for="postalCode">Codigo Postal</label>
+                <input type="text" name="creditCard" placeholder="810 0000" 
+                         pattern="^(\d{3})[\s]{1}(\d{4})$">
+                <br><br>
+
+                <!-- Script to validate type of credit card -->
+                <script>
+                    img = './assets/img/creditCard-any.png'
+                    const val = () => {
+                        if (creditCard.value == 4) {
+                            var image = document.getElementById('card')
+                            image.src = './assets/img/visa.png' 
+                            return                           
+
+                        } else if (creditCard.value == 51 || creditCard.value == 55 || 
+                                    creditCard.value == 2221 || creditCard.value == 2720) {
+                            var image = document.getElementById('card')
+                            image.src = './assets/img/mastercard.png'
+                            return
+
+                        } else { 
+                            console.log('any')
+                            return
+                        }                         
+                    }
+                </script>             
+                
+                <!-- Button -->
+                <input style="border-radius: 10px;" type="submit" value="Enviar">
+
+            </form>
+        </fieldset>
+    </section>
+</body>
+</html>

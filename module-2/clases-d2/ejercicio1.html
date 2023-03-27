@@ -4,12 +4,67 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hotel</title>
+    <link rel="icon" href="./rebound/assets/hotel.png">
 </head>
+
+<!-- ^[0-9]{7,8}+-[0-9kK]{1}$-zA-Z\s]+$ validador de rut -->
 <body>
-    <form action="">
-        
-    </form>
+    <div style="text-align: center;">
+        <img src="./rebound/assets/img/hotel foto.jfif" alt="">
+        <br><br><br>
+    </div>
+
+    <section style="text-align: center; margin: 5vw 25vw;">
+        <fieldset>
+            <legend style="text-align: start; font-size: larger; font-weight: 700;font-family: 'Courier New', Courier, monospace;">Genere su reserva</legend>
+
+            <form style="text-align: start;" action="">
+                <br>
+                <label for="date">Fecha </label>
+                <input type="date" required>
+                <br><br>
+                
+                <label for="name">Nombre </label>
+                <input type="text" name="name" placeholder="Jaime Soto" 
+                        required title="Ingrese su nombre y apellido"
+                        pattern="^[áéíóúÁÉÍÓÚñÑa-zA-Z\s]+$">
+                <br><br>
+                
+                <label for="room">Habitación </label>
+                <select name="room" id="room" required>    
+                    <option value="1"></option>
+                    <option value="2">Simple</option>
+                    <option value="3">Doble</option>
+                    <option value="4">Lujo</option>
+                    <option value="5">Vip</option>
+                    <option value="6">Villa</option>
+                </select>
+                <br><br>
+                
+                <label for="email">Email </label>
+                <input type="email" name="email" placeholder="juan@mail.com" required>
+                <br><br>
+                
+                <label for="phone">Telefono </label>
+                <input type="tel" name="phone" placeholder="9 4444 3333" required>
+                <br><br>
+
+                <label for="rangeBar">Numero de pasajeros </label>
+                <input type="range" min="0" max="10" name="rangeBar" id="rangeBar" value="1">
+                <output id="output-range" name="output-range" for="rangeBar">1</output>
+                <br><br>
+
+                <label for="comment">Solicitudes extra </label>
+                <br>
+                <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Sus necesidades extra"></textarea>
+                <br>
+                
+                <input type="submit" value="Enviar">
+
+            </form>
+        </fieldset>
+    </section>
 
 </body>
 </html>

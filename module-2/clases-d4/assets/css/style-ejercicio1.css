@@ -1,0 +1,66 @@
+body{
+    text-align: center;
+}
+
+div{
+}
+
+.rosado {
+    background-color: pink;
+    margin: 0%;
+}
+
+.verde {
+    background-color: green;
+    margin: 0%;
+}
+
+.azul {
+    background-color: blue;    
+    margin: 0%;
+}
+
+.rojo {
+    background-color: red;
+    margin: 0%;
+}
+
+.morado {
+    background-color: purple;
+    margin: 0%;
+}
+
+.gris {
+    background-color: grey;
+    margin: 0%;    
+}
+
+@media (min-width:750px){
+    body {display: flex; flex-flow: row wrap; justify-content: center; width: 100vw;}
+    .rosado {width: 80vw; height: 5vh;}
+    .verde {width: 80vw; height: 20vh;}
+    .azul {width: 80vw; height: 40vh;}
+    .rojo {width: 26.6666vw; height: 25vh;}
+    .morado {width: 26.6666vw; height: 25vh;}
+    .gris {width: 26.6666vw; height: 25vh;}
+}
+
+@media (max-width:750px){
+    body {display: flex; flex-flow: row wrap; justify-content: center; width: 90vw;}
+    .rosado {width: 70vw; height: 25vh;}
+    .verde {width: 23.33vw; height: 25vh;}
+    .azul {width: 23.33vw;height: 25vh;}
+    .rojo {width: 23.33vw; height: 25vh;}
+    .morado {width: 40vw; height: 40vh;}
+    .gris {width: 30.3vw; height: 40vh;}
+}
+
+@media (max-width:500px){
+    body {display: flex; flex-flow: column; align-items: center;}
+    .rosado {width: 50%; height: 25vh;}
+    .verde {width: 50%; height: 25vh;}
+    .azul {width: 50%; height: 12vh;}
+    .rojo {width: 26.66%; height: 0vh;}
+    .morado {width: 26.66%; height: 0vh;}
+    .gris {width: 50%; height: 25vh;}
+}
