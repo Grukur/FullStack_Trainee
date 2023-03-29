@@ -1,0 +1,98 @@
+
+body{
+    text-align: center;
+    padding: 5vh;
+}
+
+section{
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 60vw;
+    height: 16vh;
+    padding: 3px;
+    border: thin solid silver;
+}
+
+.boxLeft{
+    display: inline-flex;
+    flex-flow: row wrap;
+    height: 12vh;
+    width: 30vw;
+}
+
+.boxRight{
+    display: inline-flex;
+    flex-flow: row wrap;
+    width: 30vw;
+    height: 4vh;
+}
+
+.red{
+    background-color: red;
+    height: 4vh;
+    width: 15vw;
+    text-align: center;
+}
+.white{
+    background-color: white;
+    height: 4vh;
+    width: 15vw;
+}
+.green{
+    background-color: green;
+    height: 4vh;
+    width: 15vw;
+}
+.gray{
+    background-color: grey;
+    height: 4vh;
+    width: 15vw;
+}
+.brown{
+    background-color: brown;
+    height: 8vh;
+    width: 15vw;
+}
+.blue{
+    background-color: blue;
+    height: 4vh;
+    width: 15vw;
+}
+.violet{
+    background-color: violet;
+    height: 4vh;
+    width: 30vw;
+}
+.orange{
+    background-color: orange;
+    height: 4vh;
+    width: 15vw;
+}
+.pink{
+    background-color: pink;
+    height: 4vh;
+    width: 15vw;
+}
+.purple{
+    background-color: purple;
+    height: 4vh;
+    width: 15vw;
+}
+.yellow{
+    background-color: yellow;
+    height: 8vh;
+    width: 15vw;
+}
+.turquoise{
+    background-color: turquoise;
+    height: 4vh;
+    width: 15vw;
+}
+.black{
+    background-color: black;
+    color: white;
+    height: 4vh;
+    width: 15vw;
+}
+

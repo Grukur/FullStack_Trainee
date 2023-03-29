@@ -1,0 +1,90 @@
+html{
+    margin: 0%;
+    padding: 0%;
+}
+/* NavBar */
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    height: 8vh;
+    width: 100vw;
+    background-color: black;
+}
+.icon{
+    width: 10vw;
+    background-image: url(/module-2/clases-d3/drill/assets/img/n.png);
+    background-size: 100% 100%;
+    height: 80%;
+}
+.backGround{
+    width: 90vw;
+    background-image: url("https://picsum.photos/id/608/600/400");
+    height: 80%;
+    float: left;
+}
+.navBar{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: gray;
+    height: 25%;
+    width: 100vw;    
+}
+/* Titles */
+h1{
+    text-align: center;
+    color: grey;
+    font-size: 4rem;
+}
+.centerText{  
+    display: flex;  
+    justify-content: center;
+    width: 50vw;
+    margin: auto;
+    margin-bottom: 100px;
+}
+h2{
+    display: inline-block;
+    width: auto;
+    text-align: center;    
+    border-top: thick solid black;
+}
+/* Products */
+section{
+    display: flex;
+    flex-flow:row wrap;
+    justify-content: space-around;
+}
+.horizontalBox{
+    width: 20vw;
+    text-align: center
+}
+/* Form */
+.container1{
+    display: flex;
+    justify-content: center;
+}
+.containerForm1{
+    background-color: rgba(40, 40, 40, .9);
+    color: white;
+    width: auto;
+    padding: 5px 30px;
+    text-align: center;    
+}
+h5{
+    font-size: 32px;
+    text-align: center;
+    margin: 0;
+}
+.inputs{
+    text-align: center;
+}
+/* Footer */
+.footer1{
+    text-align: center;
+    background-image: url(/module-2/clases-d3/drill/assets/img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: white;
+    margin-top: 30px;
+    height: 50vh;
+}

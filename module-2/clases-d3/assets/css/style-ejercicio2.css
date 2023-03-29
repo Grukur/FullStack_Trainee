@@ -1,0 +1,24 @@
+
+
+.block{
+    display: block; /* aunque div es naturalmente block */
+    background-color: blue;
+    text-align: center;
+    height: 20vh;
+    width: 40vw;
+    margin: 5px;
+}
+.inline{
+    display: inline;
+    background-color: red;
+    height: 20vh; /* es inutil */
+    width: 40vw; /* es inutil */
+    margin: 10px; /* es inutil */
+}
+.inlineBlock{
+    display: inline-block;
+    background-color: yellow;
+    height: 20vh;
+    width: 40vw;
+    margin: 10px;
+}
