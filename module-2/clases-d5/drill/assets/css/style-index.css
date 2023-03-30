@@ -1,0 +1,279 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+/* NavBar */
+
+.backGround {
+    width: 100vw;
+    background-image: url(../img/fondo.jpg);
+    background-size: 100%;
+    background-color: black;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+/* Titles */
+h1 {
+    text-align: center;
+    color: grey;
+    font-size: 4rem;
+}
+
+.centerText {
+    display: flex;
+    justify-content: center;
+    width: 50vw;
+    margin: auto;
+    margin-bottom: 100px;
+}
+
+h2 {
+    display: inline-block;
+    width: auto;
+    text-align: center;
+    border-top: thick solid black;
+}
+
+/* Products */
+.container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.horizontalBox {
+    /* width: 20vw; */
+    text-align: center
+}
+
+/* Form */
+.container1 {
+    display: flex;
+    justify-content: center;
+}
+
+.containerForm1 {
+    background-color: rgba(40, 40, 40, .9);
+    color: white;
+    width: auto;
+    padding: 5px 30px;
+    text-align: center;
+}
+
+h5 {
+    font-size: 32px;
+    text-align: center;
+    margin: 0;
+}
+
+.inputs {
+    text-align: center;
+}
+
+/* Footer */
+.footer1 {
+    text-align: center;
+    background-image: url(/module-2/clases-d3/drill/assets/img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: white;
+    margin-top: 30px;
+    height: 30vh;
+}
+
+
+/* Media Querys extra Large */
+@media (min-width: 1201px) {
+    .backGround{
+        background-position-x: left;
+        background-repeat: repeat;
+        background-size: 25%;
+    }
+
+    /* Titles */
+    h1 {
+        font-size: 2.5em;
+        margin-top: 20px;
+        margin-bottom: 60px;
+    }
+
+    .centerText {
+        margin: 0px auto;
+        margin-bottom: 20px;
+    }
+
+    /* Products */
+    .container{
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        max-width: 80vw;
+        max-height: 80%;
+    }    
+
+    /* Form */
+    .containerForm1 {
+        display: flex;
+        flex-flow: column wrap;
+        width: 50vw;
+        margin-top: 1vh;
+    }
+
+    /* footer */
+    .footer1 {
+        background-color: black;
+        background-size: 60%;
+        background-position-y: top;
+        background-position-x: left;
+        background-repeat: no-repeat;
+        height: 10vh;
+        margin-top: 1vh;
+    }
+
+    .footer1 div {
+        margin-top: 2vh;
+    }
+}
+
+/* Media Querys large 992 - 1199 */
+@media (min-width: 993px) and (max-width: 1200px) {
+    .backGround{
+        background-position-x: left;
+        background-repeat: repeat;
+        background-size: 50%;
+    }
+
+    /* Titles */
+    h1 {
+        font-size: 2.5em;
+        margin-top: 20px;
+        margin-bottom: 60px;
+    }
+
+    .centerText {
+        margin: 0px auto;
+    }
+
+    /* Products */
+    .container{
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        max-width: 90vw;
+        max-height: 80%;
+    }
+
+    /* Form */
+    .containerForm1 {
+        display: flex;
+        flex-flow: column wrap;
+        width: 80vw;
+        margin-top: 1vh;
+    }
+
+    /* footer */
+    .footer1 {
+        background-color: black;
+        background-position: top;
+        background-size: 200%;
+        height: 15vh;
+        margin-top: 5vh;
+    }
+
+    .footer1 div {
+        margin-top: 5vh;
+    }
+}
+
+/* Media Query medium 768 - 991 */
+@media (min-width: 769px) and (max-width: 992px) {
+    .backGround{
+        background-position-x: left;
+        background-repeat: repeat;
+        background-size: 58%;
+    }
+
+    /* Titles */
+    h1 {
+        font-size: 2.5em;
+        margin-bottom: 50px;
+    }
+
+    .centerText {
+        margin: 0px auto;
+    }
+
+    /* Products */
+    .container{
+        flex-flow: column wrap;
+        align-items: center;
+        max-width: 80vw;
+    }
+
+    /* footer */
+    .footer1 {
+        background-color: black;
+        background-position: top;
+        background-size: 200%;
+        height: 15vh;
+        margin-top: 5vh;
+    }
+
+    .footer1 div {
+        margin-top: 5vh;
+    }
+
+    /* hiding the form */
+    .container1 {
+        display: none;
+    }
+}
+
+/* Media Query small <768 */
+@media (max-width: 768px) {
+    .backGround{
+        background-position-x: left;
+        background-position-y: 5%;
+        background-repeat: repeat;
+        background-size: 100%;
+    }
+
+    /* Titles */
+    h1 {
+        font-size: 2em;
+        margin-bottom: 45px;
+    }
+
+    h2{
+        font-size: 1.5em;
+        width: 70%;
+    }
+
+    .centerText {
+        margin-top: 0px;
+        margin-bottom: 10px;
+        width: 75%;
+    }
+
+    /* Products */
+    .container{
+        max-width: 95%;
+    }
+
+    /* footer */
+    .footer1 {
+        background-color: black;
+        background-image: unset;
+        height: 15vh;
+    }
+
+    .footer1 div {
+        margin-top: 5vh;
+    }
+
+    /* hiding the form */
+    .container1 {
+        display: none;
+    }
+}

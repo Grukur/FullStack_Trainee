@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de Hora</title>
+    <link rel="icon" href="./assets/img/n.png"> <!-- Image in title bar -->
+    <link rel="stylesheet" href="assets/css/style-reserve.css">
+</head>
+
+<nav id="upper">
+    <div class="icon"></div>
+    <div class="backGround"></div>
+    <div class="navBar">
+        <a>Nuestros productos</a>
+        <a>Sobre nosotros</a>
+        <a href="index.html">Comuniquemonos</a></a>
+        <a href="reserve.html">Reserva</a></a>
+    </div>
+</nav>
+
+<body>
+    <!-- Reserve Form -->
+    <div class="container1"">
+        <form action="printer.html" style="display: inline-block;">
+            <div class="containerForm1">                
+                <h5>Reserva</h5>
+
+                <div>
+                    <label for="nombre">Nombre</label>                
+                    <input type="text" name="nombre" placeholder="Darold Trench" required pattern="[a-z]+[\s]{1}?([a-z]{2,})">>
+                    <br><br>
+                    
+                    <label for="correo">Correo</label>
+                    <input type="email" name="correo" placeholder="xxx@xxx.xx" required>
+                    <br>
+                    <br>
+                    
+                    <label for="phone">Teléfono</label>                
+                    <input type="text" name="phone" placeholder="+569 4444 3333" required value="+569" pattern="\+569{1}[\s]?(\d{4,4})[\s]?(\d{4,4})$">
+                    <br><br>
+                    
+                    <label for="fecha">Fecha</label>
+                    <input type="date" name="fecha" required>
+                    <br><br>
+                    
+                    <label for="hora">Hora</label>
+                    <input type="time" name="hora" required>
+                    <br><br>
+                    
+                    <label for="people">Cantidad de Asistentes</label>
+                    <br>
+                    <input type="number" required>
+                    <br><br>
+                    
+                    <button>Reservar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+<footer>
+    <div class="footer1">
+        <br><br>
+        <button><a href="index.html">Volver</a></button>
+        <p>Todos los derechos reservados 
+            <img style="display: inline-block; height: 100%; vertical-align: middle;" src="./assets/img/download.jfif" alt="" width="15">
+        </p>
+    </div>
+</footer>
+
+    
+</html>

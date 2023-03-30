@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
+    <!-- Page Image -->
+    <link rel="icon" href="./assets/img/n.jpg"> <!-- Image in title bar -->
+    <link rel="stylesheet" href="./assets/css/style-index.css">
+    <title>NIMRODEL Restaurant y Pub</title>
+</head>
+
+<!-- NavBar -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary backGround" id="upper">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="./assets/img/n.png" alt="" width="30" height="28">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active text-light" aria-current="page" href="#">Nuestros Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark-emphasis" href="#">Sobre Nosotros</a>
+                <li class="nav-item">
+                    <a class="nav-link text-dark-emphasis" href="#contact-form">Comuniquemonos</a>
+                <li class="nav-item">
+                    <a class="nav-link text-dark-emphasis" href="./reserve.html">Reserva</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<body>
+    <!-- Titles -->
+    <h1>Nimrodel Pub Restaurant</h1>
+    <div class="centerText">
+        <h2>Destacados de la semana</h2>
+    </div>
+
+
+    <!-- Products -->
+    <div class="container w-100 container-sm container-md container-lg container-xl ">
+        <!-- Card -->
+        <div class="card m-1">
+            <img src="./assets/img/bebidas.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">GASEOSAS</h5>
+                <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the
+                    card's
+                    content.</p>
+            </div>
+        </div>
+        <div class="card m-1">
+            <img src="./assets/img/tablas.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">TABLAS</h5>
+                <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the
+                    card's
+                    content.</p>
+            </div>
+        </div>
+        <div class="card m-1">
+            <img src="./assets/img/shop.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">SHOPCERVEZA</h5>
+                <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the
+                    card's
+                    content.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact form -->
+    <div class="container1" id="contact-form">
+        <form action="printer.html">
+            <div class="containerForm1">
+                <h5>Comuniquemonos</h5>
+                <br>
+                <div class="inputs">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" placeholder="Darold Trench" required
+                        pattern="[a-z]+[\s]{1}?([a-z]{2,})">
+                </div>
+                <br><br>
+
+                <div class="inputs">
+                    <label for="correo">Correo</label>
+                    <input type="email" name="correo" placeholder="darold@correo.com" required>
+                </div>
+                <br><br>
+
+                <div class="inputs">
+                    <label for="phone">Teléfono</label>
+                    <input type="text" name="phone" placeholder="9 1234 5678" required value="+569"
+                        pattern="\+569{1}[\s]?(\d{4,4})[\s]?(\d{4,4})$">
+                </div>
+                <br><br>
+
+                <div class="inputs">
+                    <label for="reason">Motivo</label>
+                    <select name="reason" id="reason" required>
+                        <option value=""></option>
+                        <option value="Felicitaciones">Felicitaciones</option>
+                        <option value="Reclamos">Reclamos</option>
+                        <option value="Consultas">Consultas</option>
+                        <option value="Sugerencias">Sugerencias</option>
+                    </select>
+                </div>
+                <br><br>
+
+                <div class="inputs">
+                    <label for="comment"></label>
+                    <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+                </div>
+                <br><br>
+
+                <!-- Boton -->
+                <div>
+                    <button>Enviar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+<!-- Footer -->
+<footer>
+    <div class="footer1">
+        <br>
+        <div>
+            <button><a href="reserve.html">Reservas</a></button>
+            <button><a href="#upper">Inicio</a></button>
+            <p>Todos los derechos reservados
+                <img style="display: inline-block; height: 100%; vertical-align: middle;"
+                    src="./assets/img/download.jfif" alt="" width="15">
+            </p>
+        </div>
+    </div>
+</footer>
+
+</html>
