@@ -1,12 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- Bootstrap -->
+    <link href="./assets/vendors/bootstrap-5.3.0-alpha2-dist/css/bootstrap.css" rel="stylesheet">
+    <script defer src="./assets/vendors/bootstrap-5.3.0-alpha2-dist/js/bootstrap.bundle.js"></script>
+    <!-- Page Image -->
+    <link rel="icon" href="./assets/img/worker.png"> <!-- Image in title bar -->
+    <link rel="stylesheet" href="./assets/css/style-index.css">
+    <title>Sesion 6</title>
 </head>
+
 <body>
-    
+    <div class="container-fluid">
+        <div class="row d-flex align-items-stretch" id="contenedor">
+            <header class="col-12 bg-secondary py-5">Header</header>
+            <nav class="col-12 col-md-3 col-lg-2 navbar navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand">Navbar</a>
+                </div>
+            </nav>
+            <main class="container col-12 col-md-9 col-lg-10 bg-success">
+                <div
+                    class="row row-cols-1 row-cols-lg-2 row-cols-xl-4 justify-content-around px-2 h-100 align-items-center">
+                    <article class="col text-primary-emphasis bg-primary-subtle border border-dark shadow-lg rounded-3">
+                        Articulo 1
+                    </article>
+                    <article class="col text-primary-emphasis bg-primary-subtle border border-dark shadow-lg rounded-3">
+                        Articulo 2
+                    </article>
+                    <article class="col text-primary-emphasis bg-primary-subtle border border-dark shadow-lg rounded-3">
+                        Articulo 3
+                    </article>
+                </div>
+            </main>
+            <footer class="container-fluid bg-secondary bg-gradient py-3">
+                Footer
+            </footer>
+        </div>
+    </div>
 </body>
+
 </html>
