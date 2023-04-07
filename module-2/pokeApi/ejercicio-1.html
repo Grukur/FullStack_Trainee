@@ -1,50 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <!-- Jquery -->
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <!-- Canvas -->
     <script defer src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <!-- Script of own -->
-    <script defer src="./assets/js/script.js"></script>
+    <script defer src="./assets/js/pokeApi.js"></script>
+    <!-- Style -->
+    <link rel="stylesheet" href="./assets/css/style.css">
     <!-- Icon -->
-    <link rel="icon" href="./assets/img/worker.png">
-    <title>Consulta Pokémones</title>
+    <link rel="icon" href="./assets/img/pokemon.png">
+    <title>Pokemon Search</title>
 </head>
-<body>
 
-    <header>
-        <h1 class="text-center mt-5">CONSULTA DE POKÉMONES</h1>
-    </header>
-    <main class="container">
+<body class="backgroundBody">
 
-        <section id="datos_pokemon" class="w-50 m-auto">
-            <form id="form_pokemon">
-                <label for="nombre" class="form-label">Nombre / ID:</label>
-                <input type="text" name="nombre" id="nombre" class="form-control my-3">
-                <button class="btn btn-primary" type="submit">Consultar</button>
-            </form>
-        </section>
-        <section id="mostrar_pokemon" class="py-5">
-            <div class="row">
-                <div class="col-6">
+    <!-- Buscador -->
+    <section id="datos_pokemon" class="w-50 m-auto b">
+        <h1 class="text-center mt-5">Consulta por tu Pokemon</h1>
+        <form id="form_pokemon" class="text-center">
+            <label for="nombre" class="form-label fs-5">Nombre o ID:</label>
+            <input type="text" name="nombre" id="nombre" class="form-control mb-3 text-center w-50 m-auto">
+            <button class="btn btn-primary" type="submit">Buscar</button>
+        </form>
+    </section>
 
-                </div>
-                <div class="col-6">
-                    <div id="chartContainer" style="height: 370px; width: 100%;"></div>
-                </div>
+    <section class="w-75 mt-3 m-auto">
+        <div class="input-group mb-3">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">Pokemons</button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+            </ul>
+            <input type="text" class="form-control" aria-label="Text input with dropdown button">
+        </div>
+    </section>
 
+    <!-- mostrador -->
+    <section id="mostrar_pokemon" class="py-5 w-80">
+        <div class="row">
+            <div class="col-5">
             </div>
-        </section>
-    </main>
-    
+            <div class="col-5">
+                <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+            </div>
+        </div>
+    </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-    <script src="./assets/js/script.js"></script>
 </body>
+
 </html>
