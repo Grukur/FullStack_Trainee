@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
+    <!-- JQuery -->
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- Page Image -->
+    <link rel="icon" href="./assets/img/n.jpg"> <!-- Image in title bar -->
+    <!-- Styles -->
+    <link rel="stylesheet" href="./assets/css/style-index.css">
+    <!-- Own Script -->
+    <script defer src="./assets/js/logic.js"></script>
+    <title>NIMRODEL Reservas</title>
+</head>
+
+<!-- NavBar -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary backGround" id="upper">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="./assets/img/n.png" alt="" width="30" height="28">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active text-light" aria-current="page" href="#">Nuestros Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark-emphasis" href="#">Sobre Nosotros</a>
+                <li class="nav-item">
+                    <a class="nav-link text-dark-emphasis" href="./contacto.html">Comuniquemonos</a>
+                <li class="nav-item">
+                    <a class="nav-link text-dark-emphasis" href="./reserve.html">Reserva</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<body>
+    <!-- Reserve Form -->
+    <div class="mt-4 container-sm container-xl" id="reserve-form-page">
+        <form name="reserveForm" action="" method="get">
+            <div class="bg-dark px-3 text-light rounded">
+                <h5 class="mb-3 pt-3">Reserva</h5>
+                <div class="mb-3 text-center">
+                    <label class="form-label" for="nombre">Nombre</label>
+                    <input class="form-control" type="text" name="nombre" id="nombre" placeholder="Juan Pardo" 
+                        pattern="^[a-zA-Z]+[\s]{1}?([a-zA-Z]{2,})" oninvalid="nameForm(this)" required>
+                </div>
+                <div class="mb-3 text-center">
+                    <label class="form-label" for="correo">Correo</label>
+                    <input class="form-control" type="email" name="correo" id="correo" placeholder="xxx@xxx.com" oninvalid="nameForm(this)" required>
+                </div>
+
+                <div class="mb-3 text-center">
+                    <label class="form-label" for="phone">Teléfono</label>
+                    <input class="form-control" type="text" name="telefono" id="telefono" placeholder="9 1234 5678" value="+569"
+                        pattern="\+569{1}[\s]?(\d{4,4})[\s]?(\d{4,4})$" oninvalid="nameForm(this)" required>
+                </div>
+
+                <div class="mb-3 text-center">
+                    <label class="form-label" for="fecha">Fecha de Reserva</label>
+                    <input class="form-control" type="date" name="fecha" id="fecha" oninvalid="nameForm(this)" required>
+                </div>
+
+                <div class="mb-3 text-center">
+                    <label class="form-label" for="hora">Hora</label>
+                    <input class="form-control" type="time" name="hora" id="hora" oninvalid="nameForm(this)" required>
+                </div>
+
+                <div class="mb-3 text-center">
+                    <label class="form-label" for="asistentes">Cantidad de Asistentes</label>
+                    <select class="form-control" name="asistentes" id="asistentes" oninvalid="nameForm(this)" required>
+                        <option value=""></option>
+                        <option value="1">1 personas</option>
+                        <option value="2">2 personas</option>
+                        <option value="3">3 personas</option>
+                        <option value="4">4 personas</option>
+                        <option value="5">5 personas</option>
+                        <option value="6">6 personas</option>
+                    </select>
+                </div>
+                
+                <!-- Boton -->
+                <div class="text-center pb-3">
+                    <button type="submit" class="btn btn-primary" id="buttonReserve" value="submit">Enviar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Carousel -->
+    <div id="carouselExampleFade" class="carousel slide carousel-fade mt-4">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./assets/img/vino.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./assets/img/chorillana.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./assets/img/mojito.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+</body>
+
+<!-- Footer -->
+<footer>
+    <div class="footerFrom">
+        <div class="pt-3">
+            <button class="btn btn-primary"><a href="./index.html" class="btn btn-primary">Volver</a></button>
+            <p>Todos los derechos reservados
+                <img style="display: inline-block; height: 100%; vertical-align: middle;"
+                    src="./assets/img/download.jfif" alt="" width="15">
+            </p>
+        </div>
+    </div>
+</footer>
+
+</html>

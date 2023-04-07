@@ -13,7 +13,10 @@
         crossorigin="anonymous"></script>
     <!-- Page Image -->
     <link rel="icon" href="./assets/img/n.jpg"> <!-- Image in title bar -->
+    <!-- Styles -->
     <link rel="stylesheet" href="./assets/css/style-index.css">
+    <!-- Own Script -->
+    <script defer src="./assets/js/logic.js"></script>
     <title>NIMRODEL Contacto</title>
 </head>
 
@@ -47,27 +50,27 @@
 <body>
     <!-- Contact form -->
     <div class="mt-4 container-sm container-xl" id="contact-form-page">
-        <form action="printer.html">
+        <form name="contactoForm" action="" method="get" onsubmit="exitoContacto()">
             <div class="bg-dark px-3 text-light rounded">
                 <h5 class="mb-3 pt-3">Comuniquemonos</h5>
                 <div class="mb-3 text-center">
                     <label class="form-label" for="nombre">Nombre</label>
-                    <input class="form-control" type="text" name="nombre" placeholder="Juan Pardo" required
-                        pattern="[a-z]+[\s]{1}?([a-z]{2,})">
+                    <input class="form-control" type="text" name="nombre" id="nombre" placeholder="Juan Pardo"
+                        pattern="^[a-zA-Z]+[\s]{1}?([a-zA-Z]{2,})" oninvalid="nameForm(this)" required>
                 </div>
                 <div class="mb-3 text-center">
                     <label class="form-label" for="correo">Correo</label>
-                    <input class="form-control" type="email" name="correo" placeholder="xxx@xxx.com" required>
+                    <input class="form-control" type="email" name="correo" id="correo" placeholder="xxx@xxx.com" oninvalid="nameForm(this)" required>
                 </div>
     
                 <div class="mb-3 text-center">
                     <label class="form-label" for="phone">Teléfono</label>
-                    <input class="form-control" type="text" name="phone" placeholder="9 1234 5678" required value="+569"
-                        pattern="\+569{1}[\s]?(\d{4,4})[\s]?(\d{4,4})$">
+                    <input class="form-control" type="text" name="phone" id="telefono" placeholder="9 1234 5678" value="+569"
+                        pattern="\+569{1}[\s]?(\d{4,4})[\s]?(\d{4,4})$" oninvalid="nameForm(this)" required>
                 </div>
                 <div class="mb-3 text-center">
                     <label class="form-label" for="reason">Motivo</label>
-                    <select class="form-control" name="reason" id="reason" required>
+                    <select class="form-control" name="reason" id="Motivo" oninvalid="nameForm(this)" required>
                         <option value=""></option>
                         <option value="Felicitaciones">Felicitaciones</option>
                         <option value="Reclamos">Reclamos</option>
@@ -81,7 +84,7 @@
                 </div>
                 <!-- Boton -->
                 <div class="text-center pb-3">
-                    <button type="submit" class="btn btn-primary">Enviar</button>
+                    <button type="submit" class="btn btn-primary" id="buttonForm" value="submit">Enviar</button>
                 </div>
             </div>
         </form>

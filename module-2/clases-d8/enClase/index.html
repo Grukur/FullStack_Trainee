@@ -15,11 +15,42 @@
     <link rel="icon" href="./assets/img/worker.png"> <!-- Image in title bar -->
     <!-- js -->
     <script defer src="./assets/js/logic.js"></script>
-    <title>Drill</title>
+    <title>Ejercicios</title>
 </head>
 
 <body>
-    <h1 class="text-center">Gracias por usar Validator 2.0!</h1>
+    <!-- experimento inicial -->
+    <!-- <section></section>
+    <div class="contenedor">
+        <p id="parrafo">Hola soy un parrafo, N° 1</p>
+    </div>
+    <div class="contenedor">
+        <h1>Soy el titulo</h1>
+    </div> -->
+
+    <!-- experimento 2 -->
+    <section>
+
+        <div id="caja1" style="padding: 10px; background-color: 
+chartreuse;" onmouseover="mostrarMensaje()" onmouseout="ocultarMensaje()">
+            <p>Texto que se ve desde el inicio</p>
+        </div>
+        <div id="caja2" style="padding: 10px; background-color: blue; 
+display: none;">
+            <p>Texto oculto</p>
+        </div>
+        <div class="container my-5">
+            <div class="btn btn-primary" onclick="cambiarFondo()" ondblclick="volver()" id="boton1">accion 1</div>
+            <div class="btn btn-secondary" onclick="cambiarTexto()" ondblclick="origen()" id="boton2">accion 2</div>
+        </div>
+        <div style="background-color: coral;" id="contenido">
+            <h2 id="texto">Lorem, ipsum dolor sit amet consectetur
+                adipisicing elit. Beatae unde accusamus quibusdam, maxime sint, a
+                rem autem veniam quod sunt explicabo eligendi maiores porro
+                tempore tenetur quas incidunt laboriosam? Minus.</h2>
+        </div>
+    </section>
+
 </body>
 
 </html>

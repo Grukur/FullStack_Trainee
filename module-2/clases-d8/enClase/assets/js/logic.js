@@ -1,71 +1,60 @@
 
+var selectorId = document.getElementById('parrafo').innerText;
+console.log(selectorId + ' id')
+var selectorEtiqueta = document.getElementsByTagName('h1');
+console.log(selectorEtiqueta + ' tag')
+var selectorClass = document.getElementsByClassName('contenedor');
+console.log(selectorClass + ' class')
 
-let option = parseInt(prompt('Seleccione que desea hacer: \n1.- Calcular cual número es mayor\n2.- Sumar\n3.- Restar\n4.- Multiplicar\n5.- Dividir\n6.- Mostrar los números ingresados\n7.- Salir'));
-console.log(option);
+
+// var selectorId = document.getElementById('parrafo').innerHTML;
+// console.log(selectorId)
+// var selectorEtiqueta = document.getElementsByTagName('h1');
+// var selectorClass = document.getElementsByClassName('contenedor');
+// var selectorVarios = document.querySelector('.contenedor');
+// var selectorTodos = document.querySelectorAll(".contenedor");
+
+// for (let i=0; i<selectorClass.length; i++){
+//     console.log(selectorClass[i].innerHTML);
+// }
 
 
-if (option < 7) {
-    number1 = parseFloat(prompt('Por favor ingrese el primer número: '));
-    console.log(number1);
+// var creandoElemento = document.createElement('p');
+// creandoElemento.textContent = 'Este nodo fue creado desde js';
+// document.body.appendChild(creandoElemento); /* lo coloca en body, quedando al final */
+// selectorVarios.append(creandoElemento) /* lo coloca dentro del padre que lleva la clase contenedor */
 
-    number2 = parseFloat(prompt('Por favor ingrese el segundo número: '));
-    console.log(number2);
+// var nodoPadre = document.querySelector('.contenedor');
+// var nodoHijo = document.querySelector('#parrafo');
+
+// nodoPadre.removeChild(nodoHijo);
+
+/* hacen lo mismo */
+// var texto = document.getElementById('parrafo').innerHTML='Nuevo texto';
+// var texto = document.getElementById("parrafo").innerText="Nuevo texto";
+
+
+/* experimento 2 */
+function mostrarMensaje() {
+    document.getElementById('caja2').style.display = 'block';
 }
 
-switch (option) {
-    case 1:
-        function esMayor(num1, num2) {
-            if (num1 > num2) {
-                alert(num1 + ' es mayor que ' + num2);
-            }
-            else if (num1 < num2) {
-                alert(num2 + ' es mayor que ' + num1);
-            }
-            else {
-                alert(num1 + ' y ' + num2 + ' son iguales');
-            }
-        }
-        esMayor(number1, number2)
-        break;
-
-    case 2:
-        function sumar(num1, num2) {
-            alert('La suma de sus números ' + num1 + ' y ' + num2 + ' es: ' + (num1 + num2));
-        }
-        sumar(number1, number2)
-        break;
-
-    case 3:
-        function restar(num1, num2) {
-            alert('La resta de sus números ' + num1 + ' y ' + num2 + ' es: ' + (num1 - num2));
-        }
-        restar(number1, number2)
-        break;
-
-    case 4:
-        function multi(num1, num2) {
-            alert('La multiplicacion de sus números ' + num1 + ' y ' + num2 + ' es: ' + (num1 * num2));
-        }
-        multi(number1, number2)
-        break;
-
-    case 5:
-        function divir(num1, num2) {
-            alert('La división de sus números ' + num1 + ' y ' + num2 + ' es: ' + (num1 / num2));
-        }
-        divir(number1, number2)
-        break;
-    case 6:
-        alert('Sus números son: ' + number1 + ' y ' + number2);
-        break;
-    case 7:
-        alert('Gracias por participar');
-        break;
-    default:
-        alert('Elección incorrecta');
-        break;
-
+function ocultarMensaje() {
+    document.getElementById('caja2').style.display = 'none'
 }
 
+function cambiarFondo() {
+    document.getElementById('contenido').style.backgroundColor = 'blue';
+}
 
+function cambiarTexto() {
+    document.getElementById('texto').innerText = 'nuevo texto';
+}
 
+function volver() {
+    document.getElementById('contenido').style.backgroundColor = 'coral'
+}
+
+function origen() {
+    document.getElementById('texto').innerText = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae unde accusamus quibusdam, maxime sint, arem autem veniam quod sunt explicabo eligendi maiores porro tempore tenetur quas incidunt laboriosam? Minus"
+}

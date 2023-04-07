@@ -13,7 +13,10 @@
         crossorigin="anonymous"></script>
     <!-- Page Image -->
     <link rel="icon" href="./assets/img/n.jpg"> <!-- Image in title bar -->
+    <!-- Styles -->
     <link rel="stylesheet" href="./assets/css/style-index.css">
+    <!-- Own Script -->
+    <script defer src="./assets/js/logic.js"></script>
     <title>NIMRODEL Reservas</title>
 </head>
 
@@ -46,39 +49,39 @@
 
 <body>
     <!-- Reserve Form -->
-    <div class="mt-4 container-sm container-xl" id="contact-form-page">
-        <form action="printer.html">
+    <div class="mt-4 container-sm container-xl" id="reserve-form-page">
+        <form name="reserveForm" action="" method="get" onsubmit="exitoReserva()">
             <div class="bg-dark px-3 text-light rounded">
                 <h5 class="mb-3 pt-3">Reserva</h5>
                 <div class="mb-3 text-center">
                     <label class="form-label" for="nombre">Nombre</label>
-                    <input class="form-control" type="text" name="nombre" placeholder="Juan Pardo" required
-                        pattern="[a-z]+[\s]{1}?([a-z]{2,})">
+                    <input class="form-control" type="text" name="nombre" id="nombre" placeholder="Juan Pardo" 
+                        pattern="^[a-zA-Z]+[\s]{1}?([a-zA-Z]{2,})" oninvalid="nameForm(this)" required>
                 </div>
                 <div class="mb-3 text-center">
                     <label class="form-label" for="correo">Correo</label>
-                    <input class="form-control" type="email" name="correo" placeholder="xxx@xxx.com" required>
+                    <input class="form-control" type="email" name="correo" id="correo" placeholder="xxx@xxx.com" oninvalid="nameForm(this)" required>
                 </div>
 
                 <div class="mb-3 text-center">
                     <label class="form-label" for="phone">Teléfono</label>
-                    <input class="form-control" type="text" name="phone" placeholder="9 1234 5678" required value="+569"
-                        pattern="\+569{1}[\s]?(\d{4,4})[\s]?(\d{4,4})$">
+                    <input class="form-control" type="text" name="telefono" id="telefono" placeholder="9 1234 5678" value="+569"
+                        pattern="\+569{1}[\s]?(\d{4,4})[\s]?(\d{4,4})$" oninvalid="nameForm(this)" required>
                 </div>
 
                 <div class="mb-3 text-center">
-                    <label class="form-label" for="date">Fecha de Reserva</label>
-                    <input class="form-control" type="date" name="date" id="date">
+                    <label class="form-label" for="fecha">Fecha de Reserva</label>
+                    <input class="form-control" type="date" name="fecha" id="fecha" oninvalid="nameForm(this)" required>
                 </div>
 
                 <div class="mb-3 text-center">
-                    <label class="form-label" for="time">Hora</label>
-                    <input class="form-control" type="time" name="time" id="time">
+                    <label class="form-label" for="hora">Hora</label>
+                    <input class="form-control" type="time" name="hora" id="hora" oninvalid="nameForm(this)" required>
                 </div>
 
                 <div class="mb-3 text-center">
-                    <label class="form-label" for="people">Cantidad de Asistentes</label>
-                    <select class="form-control" name="people" id="people" required>
+                    <label class="form-label" for="asistentes">Cantidad de Asistentes</label>
+                    <select class="form-control" name="asistentes" id="asistentes" oninvalid="nameForm(this)" required>
                         <option value=""></option>
                         <option value="1">1 personas</option>
                         <option value="2">2 personas</option>
@@ -91,7 +94,7 @@
                 
                 <!-- Boton -->
                 <div class="text-center pb-3">
-                    <button type="submit" class="btn btn-primary">Enviar</button>
+                    <button type="submit" class="btn btn-primary" value="submit">Enviar</button>
                 </div>
             </div>
         </form>

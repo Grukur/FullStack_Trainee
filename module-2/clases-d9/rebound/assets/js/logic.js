@@ -17,3 +17,7 @@ function texto(){
 function textoReset(){
     document.getElementById('text3').style.fontSize = '1em'
 }
+
+/* para agregar varios estilos en una fucniona usamos
+
+event.styke.cssText = 'color: red; font-size:60px'*/
