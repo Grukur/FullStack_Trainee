@@ -40,11 +40,11 @@ fetch("https://pokeapi.co/api/v2/pokemon/?limit=200")/* le di un limite de 200 p
                 .then(imagen => imagen.json())
                 .then(images => {
                     imgagenesPoke.push(images.sprites.front_default)
-                })
-                $('#carrusel').append(`<div class="carousel-item">
-                <img src="${imgagenesPoke}" class="d-block w-100" alt="...">
+                    $('#carrusel').append(`<div class="carousel-item text-center">
+                    <img src="${images.sprites.front_default}" class="d-block w-100" alt="...">
+                    <h4 class="text-capitalize text-black">${images.name}</h4>
                 </div>`)
-                console.log(imgagenesPoke[x])
+                })
             }
 
          

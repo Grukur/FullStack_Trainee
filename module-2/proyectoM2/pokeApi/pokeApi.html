@@ -36,31 +36,44 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-link active fs-3" aria-current="page" href="./index.html">Home</a>
-                    <a class="nav-link fs-3" href=".//pokeApi.html">Buscador</a>
+                    <a class="nav-link fs-3" href="./galeria.html">Galeria</a>
                 </div>
             </div>
         </div>
     </nav>
 </section>
 
-<body class="container backgroundBody w-auto">
-    <section class="m-auto w-50">
-        <div id="carouselExampleFade" class="carousel slide carousel-fade">
-            <div id="carrusel" class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="https://dco-assets.everestads.net/iCornerStore/source-images/MICROSOFTSTORE/current/cc1b5d10e9ab7ea9c03e62e1cc6172b6.png" class="d-block w-100" alt="...">
-                    </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
+<body class="backgroundBody w-auto">
+    <!-- Search by name -->
+    <section id="datos_pokemon" class="w-50 m-auto b">
+        <h1 class="text-center mt-5">Consulta por tu Pokemon</h1>
+        <form id="form_pokemon" class="text-center">
+            <label for="nombre" class="form-label fs-5">Nombre o ID:</label>
+            <input type="text" name="nombre" id="nombre" class="form-control mb-3 text-center w-50 m-auto">
+            <button id="btnSearch" class="btn btn-primary" type="submit">Buscar</button>
+        </form>
     </section>
-    
+    <!-- Search by list -->
+    <section id="listaPokemon" class="w-25 m-auto mt-5">
+        <div class="mb-3 text-center">
+            <label for="pokemonList" class="form-label fs-5">Lista de Pokemon</label>
+            <select id="pokemonList" class="form-select text-center">
+                <option></option>
+            </select>
+        </div>
+    </section>
+
+    <!-- Show -->
+    <section id="mostrar_pokemon" class="py-1">
+        <div class="row mx-0">
+            <div class="col-12 col-md-6 my-3">
+            </div>
+            <div class="col-12 col-md-6 my-3 text-center">
+                <div id="chartContainer" class="w-75 m-auto"></div>
+            </div>
+        </div>
+    </section>
+
 </body>
 
 </html>
