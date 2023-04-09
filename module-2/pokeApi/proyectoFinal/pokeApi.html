@@ -24,36 +24,52 @@
     <title>Pokemon Search</title>
 </head>
 
-<body class="backgroundBody">
+<!-- NavBar -->
+<section class='container'>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <img src="./assets/img/bienvenido1.png" alt="" height="5%" width="10%">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active fs-3" aria-current="page" href="./index.html">Home</a>
+                    <a class="nav-link fs-3" href="./galeria.html">Galeria</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</section>
 
-    <!-- Buscador -->
+<body class="backgroundBody w-auto">
+    <!-- Search by name -->
     <section id="datos_pokemon" class="w-50 m-auto b">
         <h1 class="text-center mt-5">Consulta por tu Pokemon</h1>
         <form id="form_pokemon" class="text-center">
             <label for="nombre" class="form-label fs-5">Nombre o ID:</label>
             <input type="text" name="nombre" id="nombre" class="form-control mb-3 text-center w-50 m-auto">
-            <button class="btn btn-primary" type="submit">Buscar</button>
+            <button id="btnSearch" class="btn btn-primary" type="submit">Buscar</button>
         </form>
     </section>
-
-    <section class="w-75 mt-3 m-auto">
-        <div class="input-group mb-3">
-            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                aria-expanded="false">Pokemons</button>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-            </ul>
-            <input type="text" class="form-control" aria-label="Text input with dropdown button">
+    <!-- Search by list -->
+    <section id="listaPokemon" class="w-25 m-auto mt-5">
+        <div class="mb-3 text-center">
+            <label for="pokemonList" class="form-label fs-5">Lista de Pokemon</label>
+            <select id="pokemonList" class="form-select text-center">
+                <option></option>
+            </select>
         </div>
     </section>
 
-    <!-- mostrador -->
-    <section id="mostrar_pokemon" class="py-5 w-80">
-        <div class="row">
-            <div class="col-5">
+    <!-- Show -->
+    <section id="mostrar_pokemon" class="py-1">
+        <div class="row mx-0">
+            <div class="col-12 col-md-6 my-3">
             </div>
-            <div class="col-5">
-                <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+            <div class="col-12 col-md-6 my-3 text-center">
+                <div id="chartContainer" class="w-75 m-auto"></div>
             </div>
         </div>
     </section>
