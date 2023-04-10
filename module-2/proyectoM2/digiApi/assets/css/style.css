@@ -13,3 +13,16 @@
 .container{
     width: 100vw;
 }
+
+#myCarousel {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+  
+  .carousel-control.left {
+    margin-left: -25px;
+  }
+  
+  .carousel-control.right {
+    margin-right: -25px;
+  }
