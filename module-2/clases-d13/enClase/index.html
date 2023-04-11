@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <!-- Jquery -->
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- Canvas -->
+    <script defer src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <!-- Script of own -->
+    <script defer src="./assets/js/logic.js"></script>
+    <!-- Style -->
+    <!-- <link rel="stylesheet" href="./assets/css/style.css"> -->
+</head>
+
+<body>
+    <!-- experimento inicial -->
+    <!-- <section></section>
+    <div class="contenedor">
+        <p id="parrafo">Hola soy un parrafo, N° 1</p>
+    </div>
+    <div class="contenedor">
+        <h1>Soy el titulo</h1>
+    </div> -->
+
+    <!-- experimento 2 -->
+    <!-- <section>
+
+        <div id="caja1" style="padding: 10px; background-color: 
+chartreuse;" onmouseover="mostrarMensaje()" onmouseout="ocultarMensaje()">
+            <p>Texto que se ve desde el inicio</p>
+        </div>
+        <div id="caja2" style="padding: 10px; background-color: blue; 
+display: none;">
+            <p>Texto oculto</p>
+        </div>
+        <div class="container my-5">
+            <div class="btn btn-primary" onclick="cambiarFondo()" ondblclick="volver()" id="boton1">accion 1</div>
+            <div class="btn btn-secondary" onclick="cambiarTexto()" ondblclick="origen()" id="boton2">accion 2</div>
+        </div>
+        <div style="background-color: coral;" id="contenido">
+            <h2 id="texto">Lorem, ipsum dolor sit amet consectetur
+                adipisicing elit. Beatae unde accusamus quibusdam, maxime sint, a
+                rem autem veniam quod sunt explicabo eligendi maiores porro
+                tempore tenetur quas incidunt laboriosam? Minus.</h2>
+        </div>
+    </section> -->
+
+    <!-- experimento 3 -->
+<!--     <section>
+        <form class="w-75 m-auto mt-5" id="formulario">
+            <div class="form-group">
+                <label for="name">Nombre</label>
+                <input type="text" name="name" class="form-control" id="name">
+            </div>
+            <div class="form-group">
+                <label for="lName">Apellido</label>
+                <input type="text" name="lName" class="form-control" id="lName">
+            </div>
+            <div class="form-group">
+                <label for="rut">Rut</label>
+                <input type="text" name="rut" class="form-control" id="rut">
+            </div>
+
+            </div>
+            <button type="submit" id="boton" class="btn btn-primary mt-3">Submit</button>
+        </form>
+    </section>
+
+    <section>
+        <table class="table w-75 m-auto mt-5">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellido</th>
+                    <th scope="col">Rut</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+        </table>
+    </section> -->
+    
+    <!-- Canvas -->
+    <section class="text-center">
+        <form action="" id="formulario">
+            <label class="form-label" for="nombre">Nombre / Id Pokemon</label>
+            <input class="form-control w-25 m-auto" type="text" id="pokemon">
+            <button type="submit" class="btn btn-primary mt-3" >Consultar</button>
+        </form>
+    </section>
+
+    <section id="dataPokemon">
+        <p class="fw-bold">Nombre: <span id="nombre"></span></p>
+        <p class="fw-bold">Peso: <span id="peso"></span></p>
+        <p class="fw-bold">Altura: <span id="altura"></span></p>
+        <p class="fw-bold">Exp: <span id="exp"></span></p>
+
+    </section>
+
+    <div class="w-75 m-auto mt-5" id="chartContainer" style="height: 300px; width: 100%;"></div>
+</body>
+
+</html>
