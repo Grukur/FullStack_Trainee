@@ -43,12 +43,21 @@
     </nav>
 </section>
 
-<body class="backgroundBody m-auto">
+<body class="backgroundBody">
 
-    <section class="row m-auto">
-        <div class="col-12 m-auto col-lg-6">
+    <section class="row container d-inline-flex">
+        <div class="col-12 col-lg-5 col-xl-4">
+            <div class="m-5" id="mostrar_pokemon">
+            </div>
+        </div>
+        <!-- Show -->
+        <div class="col-12 d-lg-none">
+            <div class="d-lg-none m-0" id="chartContainer2"></div>
+        </div>
+
+        <div class="col-12 col-lg-2 col-xl-4">
             <!-- Search by name -->
-            <section id="datos_pokemon" class=" m-auto ">
+            <section id="datos_pokemon" class="">
                 <h1 class="text-center mt-5">Consulta por tu Digimon</h1>
                 <form id="form_pokemon" class="text-center">
                     <label for="nombre" class="form-label fs-5">Nombre o ID:</label>
@@ -57,7 +66,7 @@
                 </form>
             </section>
             <!-- Search by list -->
-            <section id="listaPokemon" class=" m-auto">
+            <section id="listaPokemon" class="">
                 <div class="mb-3 text-center">
                     <label for="pokemonList" class="form-label fs-5">Lista de Digimons</label>
                     <select id="pokemonList" class="form-select text-center w-50 m-auto">
@@ -66,14 +75,13 @@
                 </div>
             </section>
         </div>
-        <div class="col-12 m-auto col-lg-6">
-            <!-- Show -->
-            <section class="py-1">
-                <div class="mt-5" id="mostrar_pokemon">
-                </div>
-            </section>
+        
+        <!-- Show -->
+        <div class="col-12 col-lg-5 col-xl-4 d-none d-lg-block d-xl-block">
+            <div class="m-5" id="chartContainer"></div>
         </div>
     </section>
+
 
 
 
