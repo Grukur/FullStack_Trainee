@@ -1,70 +1,56 @@
+/* 
+let num = 5.8
+console.log(num)
 
-while (option != 7) {
-    var option = parseInt(prompt('Seleccione que desea hacer: \n1.- Calcular cual número es mayor\n2.- Sumar\n3.- Restar\n4.- Multiplicar\n5.- Dividir\n6.- Mostrar los números ingresados\n7.- Salir'));
-    console.log(option + 'out')
+let str = num.toString()
+console.log(str)
 
-    if (option < 7) {
-        number1 = parseFloat(prompt('Por favor ingrese el primer número: '));
-        number2 = parseFloat(prompt('Por favor ingrese el segundo número: '));
-        if (isNaN(number1) | isNaN(number2)) { 
-            alert('ingresaste string') 
-            break
-        }
-    }
-    switch (option) {
-        case 1:
-            function esMayor(num1, num2) {
-                if (num1 > num2) {
-                    alert(num1 + ' es mayor que ' + num2);
-                }
-                else if (num1 < num2) {
-                    alert(num2 + ' es mayor que ' + num1);
-                }
-                else {
-                    alert(num1 + ' y ' + num2 + ' son iguales');
-                }
-            }
-            esMayor(number1, number2)
-            break;
+let num2 = Number(str)
+console.log(num2)
 
-        case 2:
-            function sumar(num1, num2) {
-                alert('La suma de sus números ' + num1 + ' y ' + num2 + ' es: ' + (num1 + num2));
-            }
-            sumar(number1, number2)
-            break;
+let num3 = parseInt(str)
+console.log(num3)
 
-        case 3:
-            function restar(num1, num2) {
-                alert('La resta de sus números ' + num1 + ' y ' + num2 + ' es: ' + (num1 - num2));
-            }
-            restar(number1, number2)
-            break;
+let num4 = parseFloat(str)
+console.log(num4)
 
-        case 4:
-            function multi(num1, num2) {
-                alert('La multiplicacion de sus números ' + num1 + ' y ' + num2 + ' es: ' + (num1 * num2));
-            }
-            multi(number1, number2)
-            break;
+$('#button').click(function () {
+    $("#show").append(`
+        <p>Nuestro numero es: ${num}</p>
+        <p>Nuestro toString es: ${num}</p>
+        <p>Nuestro Number es: ${num}</p>
+        <p>Nuestro parseInt es: ${num}</p>
+        <p>Nuestro parseFloat es: ${num}</p>
+        `)
+}) */
 
-        case 5:
-            function divir(num1, num2) {
-                if (num1 != 0 & num2 != 0)
-                    alert('La división de sus números ' + num1 + ' y ' + num2 + ' es: ' + (num1 / num2));
-                else
-                    alert('No podemos dvidir por 0')
-            }
-            divir(number1, number2)
-            break;
-        case 6:
-            alert('Sus números son: ' + number1 + ' y ' + number2);
-            break;
-        case 7:
-            alert('Gracias por participar');
-            break;
-        default:
-            alert('Elección incorrecta');
-            break;
-    }
-} 
+/* let date = new Date()
+let hour = date.getHours()
+let minutes = date.getMinutes()
+console.log(`${hour}:${minutes} hrs`)
+
+
+let day = date.getDate()
+let month = date.getMonth() + 1
+let year = date.getFullYear()
+console.log(`${day}/${month}/${year}`) */
+
+// Ejercicio edad
+
+/* Fecha nacimiento */
+
+/* let nacimiento = moment('1988-09-22');
+
+let nacimientoDiv = document.getElementById('nacimiento');
+
+nacimientoDiv.innerHTML = nacimiento.format('LL'); */
+
+/* Calculo edad */
+
+/* let edadDiv = document.getElementById('edad');
+
+let edad = moment().diff(nacimiento, 'days');
+
+edadDiv.innerHTML = edad; */
+
+

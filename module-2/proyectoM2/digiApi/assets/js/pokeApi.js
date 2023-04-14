@@ -1,73 +1,106 @@
-/* const { event } = require("jquery") */
 
-/* Show and Hide parraph in Index.html */
-$(() => {
-    /* muestra y cierra Hisotria */
-    $('#history').click(function () {
-        $('#historyP').css('display', 'block')
-    })
-    $('#historyClose').click(function () {
-        $('#historyP').css('display', 'none')
-    })
-    /* muestra y cierra Extra */
-    $('#extra').click(function () {
-        $('#extraP').css('display', 'block')
-    })
-    $('#extraClose').click(function () {
-        $('#extraP').css('display', 'none')
-    })
-    /* Limpia buscador */
-    $('#pokemonList').mouseenter(function () {
-        $('#nombre').val('')
-    })
+/* index.html */
+/* muestra y cierra Hisotria */
+$('#history').click(function () {
+    $('#historyP').css('display', 'block')
 })
+$('#historyClose').click(function () {
+    $('#historyP').css('display', 'none')
+})
+/* muestra y cierra Extra */
+$('#extra').click(function () {
+    $('#extraP').css('display', 'block')
+})
+$('#extraClose').click(function () {
+    $('#extraP').css('display', 'none')
+})
+
+
+/* digiApi.html */
+/* Limpia buscador */
+$('#pokemonList').mouseenter(function () {
+    $('#nombre').val('')
+})
+$('#nombre').mouseenter(function () {
+    $('#pokemonList').val('')
+})
+
+/* Array donde guardaremos nuestra lista de Digimons con F:popularLista */
+var digiArray = []
+
+/* show divs by changing height */
+const showDivs = ()=>{
+    $('#mostrar_pokemon').attr('height', 'auto');
+    $('#chartContainer').attr('height', '600px');
+    $('#chartContainer2').attr('height', '400px');
+}
+
+/* Funcion para la estructura de nuestra card y definimos la data a entregar */
+const loadDigimon = (info) => {
+    document.querySelector("#mostrar_pokemon").innerHTML = `
+     <div class="card bg-warning-subtle">
+         <img src="${info.img}" class="card-img-top">
+         <div class="card-body">
+             <h5 class="card-title text-center fs-4 text-capitalize">${info.name}</h5>
+             <hr>
+             <p class="card-text fs-5 text-capitalize"><strong>Level: </strong> ${info.level}</p>
+         </div>
+     </div>`
+}
+
+ /* Funcion para nuestra lista y galeria */
+ const popularLista = (lista) => {                
+    for (i in lista) {
+        $('#pokemonList').append(`<option>${lista[i].name}</option>`)
+        $('#carrusel').append(`<div class="carousel-item text-center">
+            <img src="${lista[i].img}" class="d-block w-100" alt="...">
+            <h4 class="text-capitalize text-black">${lista[i].name}</h4>
+        </div>`)
+        digiArray.push(lista[i].name)
+    }
+}
+
+/* funcion selector de input para comnezar busqueda */
+const selectorDigi = (digiArray)=>{
+    if ($('#nombre').val() != '') {
+        if (digiArray.includes(($('#nombre').val()).charAt(0).toUpperCase() + ($('#nombre').val()).slice(1))) {
+            digimon = ($('#nombre').val()).charAt(0).toUpperCase() + ($('#nombre').val()).slice(1);
+        } else {
+            alert('Por favor ingrese un nombre valido o desde la lista.');
+        }
+    } else {
+        digimon = $('#pokemonList').val()
+    } return digimon
+}
+
+/* Funcion para obtener el array buscado */
+const obtenerTarget = (lista, digimon)=>{
+    for (i in lista) {
+        let nameDigi = lista[i].name
+        if (digimon === nameDigi)
+            var targetDigi = lista[i]
+    } return targetDigi
+}
+
 /* creamos funcion para consumo de API */
-function cargarDigimons() {
-    let url = "https://digimon-api.vercel.app/api/digimon/"
+function fetchDigimons() {
+    let url = `https://digimon-api.vercel.app/api/digimon/`
     fetch(url)
         .then(info => info.json())
         .then(lista => {
 
-            /* Creamos nuestra lista y galeria */
-            for (i in lista) {
-                $('#pokemonList').append(`<option>${lista[i].name}</option>`)
-                $('#carrusel').append(`<div class="carousel-item text-center">
-                        <img src="${lista[i].img}" class="d-block w-100" alt="...">
-                        <h4 class="text-capitalize text-black">${lista[i].name}</h4>
-                    </div>`)
-            }
+            /* populamos nuestra lista */            
+            popularLista(lista)
+
             /* creamos un evento preventDefault */
             $('#form_pokemon').submit(function (event) {
                 event.preventDefault()
-                let digimon = ''
-                /* Usamos un IF para elegir lista o input manual el cual dejamos dominante */
-                if ($('#nombre').val() != '') {
-                    /* aplicamos mayuscula al inicio del texto ingresado manualmente */
-                    digimon = ($('#nombre').val()).charAt(0).toUpperCase() + ($('#nombre').val()).slice(1);
-                } else {
-                    digimon = $('#pokemonList').val()
-                }
+                let digimon = selectorDigi(digiArray)               
 
-                /* creamos un if nested dentro de un for para obtener el array de nuestra key */
-                for (i in lista) {
-                    let nameDigi = lista[i].name
-                    if (digimon === nameDigi)
-                        var targetDigi = lista[i]
-                }
+                /* showDivs() */
 
-                /* Creamos la estructura de nuestra card y definimos la data a entregar */
-                const cargarDigimon = (info) => {
-                    document.querySelector("#mostrar_pokemon").innerHTML = `
-                 <div class="card m-auto bg-warning-subtle">
-                     <img src="${info.img}" class="card-img-top" alt="">
-                     <div class="card-body row">
-                         <h5 class="card-title text-center fs-4 text-capitalize">${info.name}</h5>
-                         <hr>
-                         <p class="card-text fs-5 text-capitalize"><strong>Level: </strong> ${info.level}</p>
-                     </div>
-                 </div>`
-                }
-                cargarDigimon(targetDigi)
+                /* llamamos la estructura y entregamos data desde F:obtenerTarget */
+                loadDigimon(obtenerTarget(lista, digimon))
 
                 /* inventamos stats */
                 let hp = Math.floor(Math.random() * 200) + 50
@@ -82,7 +115,7 @@ function cargarDigimons() {
                     exportEnabled: true,
                     animationEnabled: true,
                     title: {
-                        text: `Stats de ${targetDigi.name}`
+                        text: `Stats de ${obtenerTarget(lista, digimon).name}`
                     },
                     data: [{
                         type: "column",
@@ -109,7 +142,7 @@ function cargarDigimons() {
                     exportEnabled: true,
                     animationEnabled: true,
                     title: {
-                        text: `Stats de ${targetDigi.name}`
+                        text: `Stats de ${obtenerTarget(lista, digimon).name}`
                     },
                     data: [{
                         type: "column",
@@ -129,14 +162,14 @@ function cargarDigimons() {
                     }]
                 });
                 chart2.render();
-
             })
         })
         .catch((error) => {
             console.error(error)
         })
 }
-cargarDigimons()
+fetchDigimons()
+
 
 
 
