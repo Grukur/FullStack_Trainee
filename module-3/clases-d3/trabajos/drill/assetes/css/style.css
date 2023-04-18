@@ -1,0 +1,19 @@
+
+#buttonBg{
+    background-color: #102b54;
+    color: #439480;
+    height: 10vh;
+}
+#code{
+    color: #deac16;
+}
+.card{
+    background-color: #f0f0f0;
+}
+#checkText{
+    color: #fcbe03;
+}
+#textPromo{
+    color: black;
+    font-weight: 500;
+}

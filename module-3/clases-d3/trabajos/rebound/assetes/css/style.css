@@ -1,0 +1,30 @@
+
+.showcase {
+    position: relative;
+    background-color: black;
+}
+
+.bg-image {
+    opacity: 1;
+}
+
+.imgContent {
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 35%;
+}
+
+/* .imgTitle{
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 50%
+}
+.imgDireccion{
+    color: white;
+    position: absolute;
+    top: 60%;
+    left: 45%;
+} */
