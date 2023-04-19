@@ -15,3 +15,7 @@ const convert = (algo)=>{
         console.log('chao')
     }
 }
+
+if(true || true){
+    console.log('and')
+}

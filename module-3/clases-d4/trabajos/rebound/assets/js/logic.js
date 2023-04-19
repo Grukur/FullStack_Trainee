@@ -1,4 +1,5 @@
 
+
 const getInfo = ()=>{
     let from = $('#from').val()
     let to = $('#to').val()
@@ -16,3 +17,4 @@ const getInfo = ()=>{
         $('#trans').text('Tu vuelo no tiene escala')
     }
 }
+
