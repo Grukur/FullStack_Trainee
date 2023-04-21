@@ -1,7 +1,7 @@
 /* function isIsogram(str) {
     let arr = [];
-    let str2 = str.toLowerCase()
     if (str != '') {
+        let str2 = str.toLowerCase()
         for (i in str2) {
             if (arr.includes(str2[i])) {
                 return false
@@ -9,11 +9,9 @@
                 arr.push(str2[i]);              
             }
         }
-        console.log(arr, 'cumple')
     } else {
-        console.log(true, 1)
         return true
-    }
+    }return true
 }
 
 
@@ -161,7 +159,7 @@ alert('Pasó validación'); */
 // Uso de la función
 Fn.validaRut('17956954-1') ? 'Valido' : 'inválido'; */
 
-const validarEdu = ()=>{
+/* const validarEdu = ()=>{
     if($('educacion').text != ''){
         console.log($('educacion').text)
     }else{
@@ -182,4 +180,4 @@ $('button').click(function(){
     validarCondicion()
 
 
-})
+}) */
