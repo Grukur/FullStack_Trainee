@@ -44,5 +44,21 @@ validarEdad(edad)
 validarEstacion() */
 
 
+/* let startTime = new Date
+let nombre = prompt('Por favor introduce tu nombre')
+let apellido1 = prompt('Por favor introduce tu primer apellido')
+let apellido2 = prompt('Por favor introduce tu segundo apellido')
+let endTime = new Date
+
+document.write('te demoraste ' + (endTime - startTime)/1000 + ' segundos en completar los datos') */
+
+
+/*Tarea - Función que traiga todos los numeros primos menores a razon de un numero entregado por el usuario */
+
+/* armar presetnacion  */
+
+
+
+
 
 

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <!-- Jquery -->
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- moment -->
+    <script defer src="./assets/vendors/moment.js"></script>
+    <!-- Script of own -->
+    <script defer src="./assets/js/script.js"></script>
+    <!-- Style -->
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <!-- Icon -->
+    <link rel="icon" href="./assets/img/worker.png">
+    <title>Rebound m3 s5</title>
+</head>
+
+<body class="container gradient">
+    <section class="bg-light p-5 w-50 m-auto">
+        <h2>Elige algo para beber</h2>
+        <h5 class="text-secondary-emphasis mb-4">Disfruta de nuestra clasica selección de tragos</h5>
+        <ul class="list-group">
+            <li class="list-group-item d-flex">
+                <input class="form-check-input me-1 border-dark" type="checkbox" value="Martini" id="firstCheckbox">
+                <h5 class="form-check-label" for="firstCheckbox">Martini</h5>
+                <h6 style="margin-left: auto; font-weight: bold;">$2,555</h6>
+            </li>
+            <li class="list-group-item d-flex">
+                <input class="form-check-input me-1 border-dark" type="checkbox" value="" id="secondCheckbox">
+                <h5 class="form-check-label" for="secondCheckbox">Capuccino</h5>
+                <h6 style="margin-left: auto; font-weight: bold;">$1,370</h6>
+            </li>
+            <li class="list-group-item d-flex">
+                <input class="form-check-input me-1 border-dark" type="checkbox" value="" id="thirdCheckbox">
+                <h5 class="form-check-label" for="thirdCheckbox">Latte</h5>
+                <h6 style="margin-left: auto; font-weight: bold;">$1,350</h6>
+            </li>
+            <li class="list-group-item d-flex">
+                <input class="form-check-input me-1 border-dark" type="checkbox" value="" id="thirdCheckbox">
+                <h5 class="form-check-label" for="thirdCheckbox">Mojito</h5>
+                <h6 style="margin-left: auto; font-weight: bold;">$2,290</h6>
+            </li>
+        </ul>
+    </section>
+    <section class="bg-light p-5 w-50 m-auto mt-5">
+        <h2>Menu</h2>
+        <h5 class="text-secondary-emphasis mb-4">Disfruta de la mejor cocina italiana</h5>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <input class="form-check-input me-1 border-dark" type="checkbox" value="" id="firstCheckbox">
+                <h5 class="">Insalata de riso</h5>
+                <div class="d-flex" style="align-items: center;">
+                    <p class="col-8">L'insalata di riso é un classico delle ricette estive, Veloce e factile da
+                        prepararl'insalata di riso si pub insapoire con gil ingredienti piú vari.</p>
+                    <img class="col-3" src="./assets/img/riso.png"
+                        style="width: 100px; height: auto; margin-left: auto;" alt="">
+                </div>
+                <h6 class="fw-bold">$2,550</h6>
+            </li>
+            <li class="list-group-item">
+                <input class="form-check-input me-1 border-dark" type="checkbox" value="" id="firstCheckbox">
+                <h5 class="">Insalata de cipollotti</h5>
+                <div class="d-flex" style="align-items: center;">
+                    <p class="col-8">L'insalata di riso é un classico delle ricette estive, Veloce e factile da
+                        prepararl'insalata di riso si pub insapoire con gil ingredienti piú vari.</p>
+                    <img class="col-3" src="./assets/img/cipollotti.gif"
+                        style="width: 100px; height: auto; margin-left: auto;" alt="">
+                </div>
+                <h6 class="fw-bold">$2,050</h6>
+            </li>
+            <li class="list-group-item">
+                <input class="form-check-input me-1 border-dark" type="checkbox" value="" id="firstCheckbox">
+                <h5 class="">Insalata de caprese</h5>
+                <div class="d-flex" style="align-items: center;">
+                    <p class="col-8">L'insalata di riso é un classico delle ricette estive, Veloce e factile da
+                        prepararl'insalata di riso si pub insapoire con gil ingredienti piú vari.</p>
+                    <img class="col-3" src="./assets/img/caprese.png"
+                        style="width: 100px; height: auto; margin-left: auto;" alt="">
+                </div>
+                <h6 class="fw-bold">$2,580</h6>
+            </li>
+        </ul>
+    </section>
+    <section class="bg-light p-5 w-50 m-auto my-5">
+        <h2>Cuenta</h2>
+        <h5 class="text-secondary-emphasis mb-4">Esperamos que disfrute de su comida !Ciao!</h5>
+        <div class="d-flex justify-content-center">
+            <h5 class="m-auto">Item</h5>
+            <h5 class="m-auto">Precio</h5>
+        </div>
+        <div class="d-flex justify-content-center">
+            <ul id="items" class="fw-bold m-auto" style="list-style-type: none;">
+                <li class="fw-bold mt-3">Total</li>
+            </ul>
+            <ul id="price" class="fw-bold m-auto" style="list-style-type: none;">
+                <li id="cash" class="fw-bold mt-3">0,000</li>
+            </ul>
+        </div>
+    </section>
+</body>
+
+</html>
