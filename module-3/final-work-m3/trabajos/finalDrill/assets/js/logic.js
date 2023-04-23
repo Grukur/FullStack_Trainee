@@ -3,7 +3,7 @@
 let expendArray = [];
 let cash;
 
-/*  */
+/* guardamos presupuesto y desbloqueamos el form de gastos */
 $('#btnBudget').click(function (event) {
     event.preventDefault()
     cash = saveBudget()
@@ -11,7 +11,7 @@ $('#btnBudget').click(function (event) {
     $('#expendures').removeAttr('disabled')
 })
 
-
+/* Guardamos los gastos en la tabla, en el array y al mismo tiempo calculamos y actualizamos los montos*/
 $('#btnExpend').click(function (event) {
     event.preventDefault()
     let expend = saveExpends()
@@ -19,6 +19,7 @@ $('#btnExpend').click(function (event) {
     addListItems(expend)
 })
 
+/* eliminamos gastos de la tabla y actualizamos los montos */
 $('#tBody').on('click', '.trash', function () {
     $(this).parent().parent().remove()
     deleteItem($(this).parent().prev().prev().text())
@@ -26,6 +27,7 @@ $('#tBody').on('click', '.trash', function () {
 
 });
 
+/* Definimos nuestra clase constructora de objetos para manejar cada gasto */
 class Expends {
     constructor(name, amount) {
         this.name = name
@@ -33,6 +35,7 @@ class Expends {
     }
 }
 
+/* F. para guardar el presupuesto */
 function saveBudget() {
     let budgetLock = $('#budget').val()
     if (!/[\D]/gm.test(budgetLock) && budgetLock != '') {
@@ -46,12 +49,14 @@ function saveBudget() {
     }
 }
 
+/* Entregamos los datos de Presupuesto y Saldo */
 const showMoney = (cash = 0) => {
     $('#cash').text(`$${cash}`)
     $('#finalCash').text(`$${cash}`)
     $('#loger').html('')
 }
 
+/* Construimos nuestro objeto de gastos y guardamos en nuestro array de objetos */
 const saveExpends = () => {
     let nameExpLock = $('#nameExpend').val();
     let amntExpLock = $('#amountExpend').val();
@@ -67,6 +72,7 @@ const saveExpends = () => {
     }
 }
 
+/* Entregamos los gastos a nuestra tabla */
 const addListItems = (expend) => {
     $('#tBody').html('')
     expend.forEach(item => {
@@ -80,6 +86,7 @@ const addListItems = (expend) => {
     })
 }
 
+/* Eliminamos los gastos de nuestro array de objetos */
 const deleteItem = (product) => {
     expendArray = expendArray.filter(item => {
         if (item.name != product) {
@@ -88,7 +95,7 @@ const deleteItem = (product) => {
     })
 }
 
-
+/* Sumamos los gastos en nuestro array de objetos y actualizamos Gastos y Saldo */
 const sumExpends = (expend) => {
     let expendsTotal = [];
     let total;
@@ -102,6 +109,7 @@ const sumExpends = (expend) => {
     $('#finalCash').text(`$${parseInt(cash - total)}`)
 }
 
+/* Sumamos los gastos eliminados de nuestro array de objetos y actualizamos Gastos y Saldo */
 const subExpends = () => {
     let expendsTotal = [];
     let total;
