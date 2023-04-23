@@ -1,22 +1,28 @@
 
+/* declaracion de variables globales ES6 */
+let expendArray = [];
+let cash;
+
+/*  */
 $('#btnBudget').click(function (event) {
     event.preventDefault()
-    let cash = saveBudget()
+    cash = saveBudget()
     showMoney(cash)
+    $('#expendures').removeAttr('disabled')
 })
 
 
 $('#btnExpend').click(function (event) {
     event.preventDefault()
     let expend = saveExpends()
+    sumExpends(expend)
     addListItems(expend)
-    sumExpends()
 })
 
 $('#tBody').on('click', '.trash', function () {
     $(this).parent().parent().remove()
-    let productName = $(this).parent().parent().text().split('\n')
-    deleteItem(productName[1])
+    deleteItem($(this).parent().prev().prev().text())
+    subExpends()
 
 });
 
@@ -31,6 +37,7 @@ function saveBudget() {
     let budgetLock = $('#budget').val()
     if (!/[\D]/gm.test(budgetLock) && budgetLock != '') {
         let budget = parseInt(budgetLock)
+        $('#budget').val('')
         return budget
     } else {
         alert('Por favor ingrese un monto valido, sin puntos ni comas y solo numeros')
@@ -42,11 +49,8 @@ function saveBudget() {
 const showMoney = (cash = 0) => {
     $('#cash').text(`$${cash}`)
     $('#finalCash').text(`$${cash}`)
-    $('#sumExpend').text(`$${0}`)
     $('#loger').html('')
 }
-
-let expendArray = [];
 
 const saveExpends = () => {
     let nameExpLock = $('#nameExpend').val();
@@ -63,13 +67,13 @@ const saveExpends = () => {
     }
 }
 
-const addListItems = () => {
+const addListItems = (expend) => {
     $('#tBody').html('')
-    expendArray.forEach(item => {
+    expend.forEach(item => {
         $('#tBody').append(`
             <tr>
                 <td>${item.name}</td>
-                <td>${item.amount}</td>
+                <td>$${item.amount}</td>
                 <td><img class="trash" src="./assets/img/trashCan.jpg" width="15px"></td>
             </tr>
         `)
@@ -77,42 +81,43 @@ const addListItems = () => {
 }
 
 const deleteItem = (product) => {
-    expendArray.forEach(item => {
-        if (item.name.includes(product)) {
-            console.log('exito')
-        } else {
-            console.log('error')
+    expendArray = expendArray.filter(item => {
+        if (item.name != product) {
+            return item
         }
     })
 }
 
 
-const sumExpends = () => {
+const sumExpends = (expend) => {
     let expendsTotal = [];
     let total;
-    expendArray.forEach(item => {
+    expend.forEach(item => {
         expendsTotal.push(item.amount)
         total = expendsTotal.reduce((a, b) => {
             return parseInt(a) + parseInt(b)
         })
     })
-    let expendFinal = parseInt($('#sumExpend').text()) - parseInt(total)
-    $('#sumExpend').text(expendFinal)
+    $('#sumExpend').text(`$${parseInt(total)}`)
+    $('#finalCash').text(`$${parseInt(cash - total)}`)
 }
 
 const subExpends = () => {
+    let expendsTotal = [];
+    let total;
+    if (expendArray.length >= 1) {
+        expendArray.forEach(item => {
+            expendsTotal.push(item.amount)
+            total = expendsTotal.reduce((a, b) => {
+                return parseInt(a) + parseInt(b)
+            })
+        })
+        $('#sumExpend').text(`$${parseInt(total)}`)
+        $('#finalCash').text(`$${parseInt(cash - total)}`)
+    } else {
+        $('#sumExpend').text(0)
+        $('#finalCash').text(`$${parseInt(cash)}`)
 
+    }
 }
 
-const sumAndSubtractFinal = () => {
-
-}
-
-
-/* cansado..... */
-
-
-/* <td>Aceite Oliva</td>
-                            <td>3750</td>
-                            <td><button id="trash" class="border-0 bg-light"><img src="./assets/img/trashCan.jpg"
-                                        width="15px"></button></td> */

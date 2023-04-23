@@ -39,32 +39,34 @@
             <div class="d-flex justify-content-between w-50 mx-3 mt-5">
                 <div>
                     <h6>PRESUPUESTO</h6>
-                    <h4 id="cash">50000</h4>
+                    <h4 id="cash">0</h4>
                 </div>
                 <div>
                     <h6>GASTOS</h6>
-                    <h4 id="sumExpend">3750</h4>
+                    <h4 id="sumExpend">0</h4>
                 </div>
                 <div>
                     <h6>SALDO</h6>
-                    <h4 id="finalCash">46250</h4>
+                    <h4 id="finalCash">0</h4>
                 </div>
             </div>
         </div>
         <div class="d-flex">
             <div class="border border-danger border-3 rounded-4 w-50 mx-3 mt-5">
-                <form class="p-2 bg-danger bg-opacity-25">
-                    <div class="mb-1">
-                        <label for="exampleInputPassword1" class="form-label">Ingresa el nombre del Gasto</label>
-                        <input id="nameExpend" type="text" class="border-1 form-control bg-success bg-opacity-10">
-                    </div>
-                    <div class="mb-1">
-                        <label for="exampleInputPassword1" class="form-label">Ingresa el monto del Gasto</label>
-                        <input id="amountExpend" type="text" class="border-1 form-control bg-success bg-opacity-10 mb-2">
-                    </div>
-                    <button id="btnExpend" type="submit"
-                        class="border border-danger border-3 rounded-4 btn btn-light">Añadir Gasto</button>
-                </form>
+                <fieldset id="expendures" disabled>
+                    <form class="p-2 bg-danger bg-opacity-25">
+                        <div class="mb-1">
+                            <label for="exampleInputPassword1" class="form-label">Ingresa el nombre del Gasto</label>
+                            <input id="nameExpend" type="text" class="border-1 form-control bg-success bg-opacity-10">
+                        </div>
+                        <div class="mb-1">
+                            <label for="exampleInputPassword1" class="form-label">Ingresa el monto del Gasto</label>
+                            <input id="amountExpend" type="text" class="border-1 form-control bg-success bg-opacity-10 mb-2">
+                        </div>
+                        <button id="btnExpend" type="submit"
+                            class="border border-danger border-3 rounded-4 btn btn-light">Añadir Gasto</button>
+                    </form>
+                </fieldset>
             </div>
             <div class="w-50 mx-3 mt-5">
                 <table id="table" class="table">
@@ -76,10 +78,7 @@
                         </tr>
                     </thead>
                     <tbody id="tBody">
-                        <tr id="loger">
-                            <td>Aceite Oliva</td>
-                            <td>3750</td>
-                            <td><img id="trashcan" class="trash" src="./assets/img/trashCan.jpg" width="15px"></td>
+                        <tr id="loger">                            
                         </tr>
                     </tbody>
                 </table>
