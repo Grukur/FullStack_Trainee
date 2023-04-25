@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "jquery": "^3.6.4",
-    "moment": "^2.29.4"
+    "moment": "^2.29.4",
+    "uuid": "^9.0.0",
+    "uuidv4": "^6.2.13"
   }
 }

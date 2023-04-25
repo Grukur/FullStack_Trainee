@@ -1,3 +1,12 @@
+
+/* Necesitaba desabilitar el formulario de gastos, hasta tener un monto en presupuesto, investigando, di con esta posibilidad, pero se puede bypass con Tab, segui investigando y di con tag "fieldset" el cual ocupé */
+
 /* #expendures{
     pointer-events: none;
 } */
+
+/* para contener el sebordamiento */
+.reactTable {
+    height: 210px;
+    overflow-y: scroll;
+  }

@@ -13,73 +13,106 @@
         crossorigin="anonymous"></script>
     <!-- Jquery -->
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <!-- moment -->
-    <script defer src="./assets/vendors/moment.js"></script>
     <!-- Script of own -->
     <script defer src="./assets/js/logic.js"></script>
     <!-- Style -->
     <link rel="stylesheet" href="./assets/css/styles.css">
     <!-- Icon -->
-    <link rel="icon" href="./assets/img/worker.png">
-    <title>Final work m3</title>
+    <link rel="icon" href="./assets/img/Calculadora Icon.png">
+    <title>Presupuesto App</title>
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg bg-success bg-opacity-50 p-3 border-bottom border-success border-5">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="./assets/img/Calculadora Icon.png" alt="Logo" width="30"
+                    height="24" class="d-inline-block align-text-top">
+                Presupuesto App</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="info.html">Info</a>
+                    </li>
+            </div>
+        </div>
+    </nav>
+
     <div class="container p-3">
+        <!-- Contenedor del form presupuesto y de los montos finales -->
         <div class="d-flex">
-            <div class="border border-success border-3 rounded-4 w-50 mx-3 mt-5">
+            <!-- Form presupuesto -->
+            <div class="border border-success border-3 rounded-4 mx-3 mt-5 w-50">
                 <form class="p-2 bg-success bg-opacity-25">
                     <div class="mb-1">
-                        <label for="exampleInputEmail1" class="form-label">Ingresa tu Presupuesto</label>
+                        <label for="exampleInputEmail1" class="form-label fw-bold">Ingresa tu Presupuesto</label>
                         <input id="budget" type="text" class="border-1 form-control bg-success bg-opacity-10 mb-2">
-                        <button id="btnBudget" type="submit" class="border border-success border-3 rounded-4 btn btn-light">Calcular</button>
+                        <button id="btnBudget" type="submit"
+                            class="border border-success border-3 rounded-4 btn btn-light text-success fw-bold">Calcular</button>
+                        <button id="btnMod" type="submit"
+                            class="border text-success border-success border-3 rounded-4 btn btn-light fw-bold">Modificar</button>
                     </div>
                 </form>
             </div>
-            <div class="d-flex justify-content-between w-50 mx-3 mt-5">
+            <!-- Montos finales -->
+            <div class="d-flex justify-content-between mx-3 mt-5 w-50">
                 <div>
                     <h6>PRESUPUESTO</h6>
-                    <h4 id="cash">0</h4>
+                    <h4 class="text-center" id="cash">0</h4>
                 </div>
                 <div>
                     <h6>GASTOS</h6>
-                    <h4 id="sumExpend">0</h4>
+                    <h4 class="text-center" id="sumExpend">0</h4>
                 </div>
                 <div>
                     <h6>SALDO</h6>
-                    <h4 id="finalCash">0</h4>
+                    <h4 class="text-center" id="finalCash">0</h4>
                 </div>
             </div>
         </div>
+        <!-- Contenedor del Form gastos y de la tabla de gastos -->
         <div class="d-flex">
+            <!-- Form gastos -->
             <div class="border border-danger border-3 rounded-4 w-50 mx-3 mt-5">
+                <!-- Solo se activa despues de activar boton de form presupuesto -->
                 <fieldset id="expendures" disabled>
                     <form class="p-2 bg-danger bg-opacity-25">
                         <div class="mb-1">
-                            <label for="exampleInputPassword1" class="form-label">Ingresa el nombre del Gasto</label>
+                            <label for="exampleInputPassword1" class="form-label fw-bold">Ingresa el nombre del
+                                Gasto</label>
                             <input id="nameExpend" type="text" class="border-1 form-control bg-success bg-opacity-10">
                         </div>
                         <div class="mb-1">
-                            <label for="exampleInputPassword1" class="form-label">Ingresa el monto del Gasto</label>
-                            <input id="amountExpend" type="text" class="border-1 form-control bg-success bg-opacity-10 mb-2">
+                            <label for="exampleInputPassword1" class="form-label fw-bold">Ingresa el monto del
+                                Gasto</label>
+                            <input id="amountExpend" type="text"
+                                class="border-1 form-control bg-success bg-opacity-10 mb-2">
                         </div>
                         <button id="btnExpend" type="submit"
-                            class="border border-danger border-3 rounded-4 btn btn-light">Añadir Gasto</button>
+                            class="border border-danger border-3 rounded-4 btn btn-light text-danger fw-bold">Añadir
+                            Gasto</button>
                     </form>
                 </fieldset>
             </div>
-            <div class="w-50 mx-3 mt-5">
+            <!-- Tabla de gastos -->
+            <div class="w-50 mx-3 mt-5 reactTable">
                 <table id="table" class="table">
                     <thead>
                         <tr>
                             <th scope="col">GASTO</th>
                             <th scope="col">VALOR</th>
                             <th scope="col"></th>
+                            <th scope="col"></th>
                         </tr>
                     </thead>
                     <tbody id="tBody">
-                        <tr id="loger">                            
-                        </tr>
+
                     </tbody>
                 </table>
             </div>
