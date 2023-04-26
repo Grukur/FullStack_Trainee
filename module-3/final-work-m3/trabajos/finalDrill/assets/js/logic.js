@@ -1,10 +1,9 @@
 
 /* ID Gen */
-/* import {v4 as uuidv4} from 'uuid';
 
-let myuuid = uuidv4();
+import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
+ 
 
-console.log('Your UUID is: ' + myuuid); */
 
 
 /* trate de molularizar, no se si está bien o se me fue la mano XD */
@@ -45,6 +44,7 @@ $('#tBody').on('click', '.trash', function () {
 });
 
 /* Definimos nuestra clase constructora de objetos para manejar cada gasto */
+let ids = uuidv4().slice(0,6)
 class Expends {
     constructor(name, amount, id) {
         this.name = name
@@ -90,7 +90,6 @@ const showMoney = (cash = 0) => {
         $('#cash').text(`$${cash.toLocaleString()}`)
         $('#finalCash').text(`$${cash.toLocaleString()}`)
         /* $('#tBody').html('') */
-
     }
 }
 
@@ -99,7 +98,7 @@ const saveExpends = () => {
     let nameExpLock = $('#nameExpend').val();
     let amntExpLock = $('#amountExpend').val();
     if (!/[\D]/gm.test(amntExpLock) && amntExpLock != '' && nameExpLock != '') {
-        let objExpend = new Expends(nameExpLock, amntExpLock);
+        let objExpend = new Expends(nameExpLock, amntExpLock, ids);
         expendArray.push(objExpend)
         $('#amountExpend').val('') && $('#nameExpend').val('')
         return expendArray
@@ -172,7 +171,6 @@ const subExpends = () => {
     } else {
         $('#sumExpend').text(0).toLocaleString()
         $('#finalCash').text(`$${(cash).toLocaleString()}`)
-
     }
 }
 
