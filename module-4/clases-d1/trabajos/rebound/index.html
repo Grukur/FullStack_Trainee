@@ -16,15 +16,44 @@
     <!-- moment -->
     <script defer src="./assets/vendors/moment.js"></script>
     <!-- Script of own -->
-    <script defer src="./assetes/js/script.js"></script>
+    <script defer src="./assets/js/script.js"></script>
     <!-- Style -->
-    <link rel="stylesheet" href="./assetes/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
     <!-- Icon -->
-    <link rel="icon" href="./assetes/img/worker.png">
+    <link rel="icon" href="./assets/img/worker.png">
     <title>Rebound m3 s5</title>
 </head>
 
-<body class="container">
+<body class="container p-5">
+    <div>
+        <div class="text-start">
+            <img class="" src="./assets/img/logo.png" alt="">        
+            <form>
+                <div class="row">
+                    <div class="mb-3 col-4">
+                      <label for="exampleInputEmail1" class="form-label">Cuanto tienes que pagar?</label>
+                      <input type="text" class="form-control" id="monto" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3 col-4">
+                      <label for="exampleInputPassword1" class="form-label">Cuanto interés(%) debes pagar</label>
+                      <input type="text" class="form-control" id="interes">
+                    </div>
+                    <div class="mb-3 col-4">
+                        <label for="exampleInputPassword1" class="form-label">En cuantas cuotas puedes pagarlo?</label>
+                        <input type="text" class="form-control" id="cuotas">
+                    </div>
+                </div>
+                <div class="text-center mt-5">
+                    <button id="btn" type="submit" class="btn bgGradient text-white">Como lo pago?</button>
+                </div>
+              </form>
+
+              <div>
+                <h3 id="final" class="msgFinal">bla bla bla bla bla bla bla</h3>
+              </div>
+        </div>
+
+    </div>
     
 
 </body>

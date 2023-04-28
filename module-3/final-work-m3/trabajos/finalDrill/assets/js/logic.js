@@ -1,10 +1,5 @@
-
 /* ID Gen */
-
 import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
- 
-
-
 
 /* trate de molularizar, no se si está bien o se me fue la mano XD */
 
