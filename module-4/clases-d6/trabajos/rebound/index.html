@@ -16,17 +16,116 @@
     <!-- moment -->
     <script defer src="./assets/vendors/moment.js"></script>
     <!-- Script of own -->
-    <script defer src="./assetes/js/script.js"></script>
+    <script defer src="./assets/js/script.js"></script>
     <!-- Style -->
-    <link rel="stylesheet" href="./assetes/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
     <!-- Icon -->
-    <link rel="icon" href="./assetes/img/worker.png">
+    <link rel="icon" href="./assets/img/worker.png">
     <title>Rebound m3 s5</title>
 </head>
 
-<body class="container">
+<body class="container p-5">
+    <div class="d-flex justify-content-evenly w-25 m-auto border border-secondary mb-4">
+        <div><img src="./assets/img/chile.png" width="40px"></div>
+        <div class="text-center">
+            <h2 id="relojCl"></h2>
+            <h4>Santiago</h4>
+        </div>
+    </div>
+    <div class="d-flex justify-content-evenly w-25 m-auto border border-secondary mb-4">
+        <div><img src="./assets/img/italia.png" width="40px"></div>
+        <div class="text-center">
+            <h2 id="relojIt"></h2>
+            <h4>Roma</h4>
+        </div>
+    </div>
+    <div class="d-flex justify-content-evenly w-25 m-auto border border-secondary mb-4">
+        <div><img src="./assets/img/uk.webp" width="40px"></div>
+        <div class="text-center">
+            <h2 id="relojUk"></h2>
+            <h4>Londres</h4>
+        </div>
+    </div>
+    <div class="d-flex justify-content-evenly w-25 m-auto border border-secondary mb-4">
+        <div><img src="./assets/img/usa.webp" width="40px"></div>
+        <div class="text-center">
+            <h2 id="relojUs"></h2>
+            <h4>Washington</h4>
+        </div>
+    </div>
+    <div class="d-flex justify-content-evenly w-25 m-auto border border-secondary mb-4">
+        <div><img src="./assets/img/russia-flag-free-png.webp" width="40px"></div>
+        <div class="text-center">
+            <h2 id="relojRu"></h2>
+            <h4>Moscú</h4>
+        </div>
+    </div>
+    <div class="d-flex justify-content-evenly w-25 m-auto border border-secondary mb-4">
+        <div><img src="./assets/img/china.png" width="40px"></div>
+        <div class="text-center">
+            <h2 id="relojCh"></h2>
+            <h4>Pekín</h4>
+        </div>
+    </div>
+    <div class="d-flex justify-content-evenly w-25 m-auto border border-secondary mb-4">
+        <div><img src="./assets/img/korea.png" width="40px"></div>
+        <div class="text-center">
+            <h2 id="relojKo"></h2>
+            <h4>Seúl</h4>
+        </div>
+    </div>
+
     
+
 
 </body>
 
 </html>
+
+
+<!-- <body>
+    <h1 id="mostrarContador">0</h1>
+    <h1 id="mensaje" style="display:none;">Temporizador ha finalizado.</h1>
+    <input type="number" value="0" id="temporizador" required>
+    <button onclick="iniciar()" style="background-color: green;">Iniciar</button>
+    <button onclick="cancelar()" style="background-color: red;">Cancelar</button>
+    <button onclick="reanudar()" style="background-color: yellow;">Reanudar</button>
+    <button onclick="pausar()" style="background-color: skyblue">Pausar</button>
+
+    <script> 
+    let contador = 0; 
+    let intervalo; 
+    let contenedorContador = document.getElementById("mostrarContador"); 
+    let mensaje = document.getElementById("mensaje"); 
+    let sonido = new Audio("./alarm-loud.mp3"); 
+    
+    const actualizarContador = () => { 
+        contenedorContador.innerText = contador; 
+        if (contador < 0) { 
+            cancelar();
+            mensaje.style.display = "block" 
+            emitirSondo() 
+        } contador--; } 
+        const iniciar = () => { 
+            mensaje.style.display = "none" 
+            let valor = parseInt(temporizador.value); 
+            contenedorContador.innerText = valor; 
+            contador = valor; 
+            intervalo = setInterval(actualizarContador, 1000) 
+        } 
+        const pausar = () => { 
+            clearInterval(intervalo); 
+        } 
+        const cancelar = () => { 
+            contenedorContador.innerText = 0; 
+            sonido.pause(); pausar(); 
+        } 
+        const reanudar = () => { 
+            intervalo = setInterval(actualizarContador, 1000) 
+        } 
+        const emitirSondo = () => { 
+            sonido.play() 
+            setTimeout(() => { sonido.pause(); }, 2000) 
+        } 
+        </script>
+</body> -->

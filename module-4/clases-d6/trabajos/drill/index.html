@@ -15,8 +15,7 @@
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <!-- moment -->
     <script defer src="./assets/vendors/moment.js"></script>
-    <!-- Script of own -->
-    <script defer src="./assets/js/script.js"></script>
+
     <!-- Style -->
     <link rel="stylesheet" href="./assets/css/styles.css">
     <!-- Icon -->
@@ -24,8 +23,54 @@
     <title>Rebound m3 s5</title>
 </head>
 
-<body>
-    
+<body class="container p-5">
+
+    <h1 id="mostrarContador">0</h1>
+    <h2 id="mensaje" style="display:none;">Temporizador ha finalizado.</h2>
+    <input title="btn" type="number" value="0" id="temporizador">
+    <button type="button" onclick="iniciar()" style="background-color: green;">Iniciar</button>
+    <button type="button" onclick="cancelar()" style="background-color: red;">Cancelar</button>
+    <button type="button" onclick="pausar()" style="background-color: lightskyblue;">Pausar</button>
+    <button type="button" onclick="reanudar()" style="background-color: yellow;">Reanudar</button>
+
+
+    <script>
+        let contador = 0;
+        let intervalo;
+        let contenedorContador = document.getElementById('mostrarContador').innerText
+        let mensaje = document.getElementById("mensaje"); 
+
+        const actualizarContador = () => {
+            contenedorContador = contador;
+            if (contador < 0) {
+                cancelar()
+                mensaje.style.display = "block"
+            } contador--;
+        }
+
+        const iniciar = () => {
+            mensaje.style.display = "none"
+            let valor = parseInt(document.getElementById('temporizador').value);
+            contenedorContador = valor
+            contador = valor
+            intervalo = setInterval(actualizarContador, 1000)
+        }        
+
+        const cancelar = () => {
+            contenedorContador = 0
+            temporizador.value = ''
+            clearInterval(intervalo)
+        }
+
+        const reanudar = () => {
+            intervalo = setInterval(() => {
+            }, 1000)
+        }
+
+        const pausar = () => {
+            clearInterval(intervalo)
+        }
+    </script>
 
 </body>
 
