@@ -35,6 +35,8 @@ Promise.all(arraySolicitudes)
         console.log('Error: ', error)
     }); */
 
+/* const { response } = require("express"); */
+
 /* profe */
 /* const promesa1 = async () => {
     return new Promise((resolve, reject) => {
@@ -129,7 +131,7 @@ $.ajax({
     }
 }); */
 
-let btnConsulta = document.getElementById('btnConsulta');
+/* let btnConsulta = document.getElementById('btnConsulta');
 let btnConsulta2 = document.getElementById('btnConsulta2');
 let btnConsulta3 = document.getElementById('btnConsulta3');
 let btnConsulta4 = document.getElementById('btnConsulta4');
@@ -171,7 +173,7 @@ btnConsulta3.addEventListener('click', () => {
 			console.log(error.responseText);
 			console.log('No se pudo acceder a la información');
 		});
-});
+}); */
 
 // Post en API Ivan
 /* let data = {
@@ -210,6 +212,11 @@ btnConsulta5.addEventListener('click', () => {
 	});
 }); */
 
-
-
+/* ojo con los endpoint */
+/* let url = 'https://thankful-teal-cow.cyclic.app/usuarios/eb44fe'
+fetch(url)
+.then((response) => response.json())
+.then(data =>{
+    console.log(data)
+}) */
 
