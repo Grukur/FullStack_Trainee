@@ -1,8 +1,28 @@
 {
   "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
     "jquery": "^3.6.4",
     "moment": "^2.29.4",
     "uuid": "^9.0.0",
     "uuidv4": "^6.2.13"
-  }
+  },
+  "name": "bootcamp-2023",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Grukur/FullStack_Trainee.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Grukur/FullStack_Trainee/issues"
+  },
+  "homepage": "https://github.com/Grukur/FullStack_Trainee#readme",
+  "description": ""
 }
