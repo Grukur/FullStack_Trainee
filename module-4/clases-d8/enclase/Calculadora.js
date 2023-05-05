@@ -174,7 +174,7 @@ btnConsulta3.addEventListener('click', () => {
 });
 
 // Post en API Ivan
-let data = {
+/* let data = {
 	title: 'Prueba post',
 	body: 'Esto es una prueba post',
 	userId: 100,
@@ -208,6 +208,8 @@ btnConsulta5.addEventListener('click', () => {
 			console.log(result);
 		},
 	});
-});
+}); */
+
+
 
 
