@@ -1,21 +1,25 @@
 
-const celsiusToFahrenheit = (temperature = 1)=>{
-    var nowTemp = (temperature -32) *(5/9)
-    bigFtemp = ($('#bigTemp').text() -32) *(5/9)
-    console.log(bigFtemp)
-    $('#bigTemp').text(bigFtemp)
+let contador = 0;
+let intervalo;
+let vistaContador = document.getElementById("here");
 
-    return(nowTemp)
-}
-
-const convert = (algo)=>{
-    if($('input').prop('checked') == true){
-        celsiusToFahrenheit()
-    }else{
-        console.log('chao')
+const actualizarContador = () => {
+    if (contador < 10) {
+        vistaContador.innerText = "0" + contador;
+    } else {
+        vistaContador.innerText = contador;
     }
+    contador--;
 }
 
-if(true || true){
-    console.log('and')
+const iniciar = () => {
+    let valor = parseInt(seconds.value);
+    vistaContador.innerText = valor;
+    contador = valor;
+    intervalo = setInterval(actualizarContador, 1000) 
+}
+
+const cancelar = () => {
+    clearInterval(intervalo);
+    vistaContador.innerText = "00"
 }

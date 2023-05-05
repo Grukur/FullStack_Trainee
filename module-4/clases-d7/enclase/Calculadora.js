@@ -75,7 +75,7 @@ mostrar(); */
 
 
 /* fetch reutilizable mio */
-const fetcher = async (id) => {
+/* const fetcher = async (id) => {
     return new Promise(async (resolve, reject) => {
         let url = 'https://pokeapi.co/api/v2/pokemon/' + id
         try {
@@ -97,8 +97,7 @@ const mostrarPokemon = async (id) => {
     }
 };
 
-mostrarPokemon(1);
-
+mostrarPokemon(1); */
 
 /* profe */
 /* const obtenerPokemon = (id) => {
@@ -136,3 +135,89 @@ const mostrarPokemonTabla = async (id) => {
 };
 
 mostrarPokemonTabla(1); */
+
+/* usando promise con una simulacion de delay */
+/* const consultar = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve('OK');
+        }, 1500);
+    });
+}
+
+const mostrarDato =async()=>{
+    let resultado = await consultar();
+    return resultado
+}
+
+mostrarDato().then((data)=> {
+    console.log(data)  
+})
+
+mostrarDato() */
+
+/* ejercicio de clase */
+/* const obtnerId = async (id) => {
+    return new Promise(async (resolve, reject) => {
+        let url = 'https://jsonplaceholder.typicode.com/' + id
+        try {
+            let response = await fetch(url);
+            let users = await response.json();
+            return resolve(users);
+        } catch (error) {
+            reject("Se ha generado un error al procesar la petición");
+        } 
+    });
+};
+
+const obtenerPost = (id) => {
+    return new Promise(async (resolve, reject) => {
+        let url = 'https://jsonplaceholder.typicode.com/posts?userId=' + id
+        try {
+            let response = await fetch(url);
+            let posts = await response.json();
+            return resolve(posts);
+        } catch (error) {
+            reject("Se ha generado un error al procesar la petición");
+        }
+    });
+}
+
+let info = obtnerId('users')
+info.then((usuarios) => {
+    let usuario = usuarios.find((usuario) => usuario.name == 'Ervin Howell')
+    let posts = obtenerPost(usuario.id)
+    posts.then((posts) => {
+        console.log(posts)
+    })
+}) */
+
+
+/* usando Promise All */
+/* ejercicio 2 - devolver 3 pokemones al mismo tiempo */
+const obtenerPokemon = (pokemon) => {
+    return new Promise(async (resolve, reject) => {
+        let url = 'https://pokeapi.co/api/v2/pokemon/' + pokemon
+        try {
+            let response = await fetch(url);
+            let pokemon = await response.json();
+            return resolve(pokemon.name);
+        } catch (error) {
+            reject("Se ha generado un error al procesar la petición");
+        }
+    });
+}
+
+const random = ()=>{
+    let random = Math.floor(Math.random() * (1000 - 1) + 1)
+    return random
+}
+
+const mostrarPokemon = async () => {
+    Promise.all([obtenerPokemon(random()), obtenerPokemon(random()), obtenerPokemon(random())]).then((respuesta)=>{
+        console.log(respuesta)
+    })
+}
+
+mostrarPokemon()
+

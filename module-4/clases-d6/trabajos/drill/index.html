@@ -15,7 +15,8 @@
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <!-- moment -->
     <script defer src="./assets/vendors/moment.js"></script>
-
+    <!-- Own Script -->
+    <script defer src="./assets/js/logic.js"></script>
     <!-- Style -->
     <link rel="stylesheet" href="./assets/css/styles.css">
     <!-- Icon -->
@@ -23,7 +24,55 @@
     <title>Rebound m3 s5</title>
 </head>
 
-<body class="container p-5">
+<body>
+    <div class="main_counter_area">
+        <section id="cover" class="min-vh-100 py-5 bg-secondary">
+            <div id="cover-caption">
+                <div class="container-fluid">
+                    <div class="row text-white">
+                        <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form p-4">
+                            <!-- <h1 class="display-4 py-2 text-truncate">00</h1> -->
+                            <div class="overlay py-5 bg-dark">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="main_counter_content text-center white-text wow fadeInUp">
+                                            <div class="col-md-12">
+                                                <div class="single_counter p-y-2 m-t-1"> <i
+                                                        class="fa fa-briefcase m-b-1"></i>
+                                                    <h2 class="statistic-counter"><span id="here">00</span></h2>
+                                                    <p>segundos</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="p-5">
+                                <form action="" class="justify-content-center">
+                                    <div class="form-group pb-4">
+                                        <label class="pb-3">
+                                            <h4>Ingresa segundos</h4>
+                                        </label>
+                                        <input id="seconds" type="number" class="form-control" placeholder="00"
+                                            min="00">
+                                    </div>
+                                    <button onclick="iniciar()" type="button"
+                                        class="btn btn-success btn-lg mb-2">Empezar</button>
+                                    <button onclick="cancelar()" type="button"
+                                        class="btn btn-danger btn-lg mb-2">Cancelar</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+
+<!-- <body class="container p-5">
 
     <h1 id="mostrarContador">0</h1>
     <h2 id="mensaje" style="display:none;">Temporizador ha finalizado.</h2>
@@ -32,9 +81,9 @@
     <button type="button" onclick="cancelar()" style="background-color: red;">Cancelar</button>
     <button type="button" onclick="pausar()" style="background-color: lightskyblue;">Pausar</button>
     <button type="button" onclick="reanudar()" style="background-color: yellow;">Reanudar</button>
+ -->
 
-
-    <script>
+<!-- <script>
         let contador = 0;
         let intervalo;
         let contenedorContador = document.getElementById('mostrarContador').innerText
@@ -70,7 +119,7 @@
         const pausar = () => {
             clearInterval(intervalo)
         }
-    </script>
+    </script> -->
 
 </body>
 

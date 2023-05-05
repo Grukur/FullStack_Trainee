@@ -1,111 +1,96 @@
-/* 
-let num = 5.8
-console.log(num)
 
-let str = num.toString()
-console.log(str)
+/* const promesa1 = async () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve = 'Promesa 1';
+        }, 1000)
+    })
+};
 
-let num2 = Number(str)
-console.log(num2)
+const promesa2 = async () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve = 'Promesa 2';
+        }, 1500)
+    })
+};
+const promesa3 = async () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve = 'Promesa 3';
+        }, 500)
+    })
+};
 
-let num3 = parseInt(str)
-console.log(num3)
+let solicitud1 = promesa1();
+let solicitud2 = promesa2();
+let solicitud3 = promesa3();
+let arraySolicitudes = [solicitud1, solicitud2, solicitud3];
 
-let num4 = parseFloat(str)
-console.log(num4)
+Promise.all(arraySolicitudes)
+    .then((respuestas) => {
+        console.log(respuestas);
+    })
+    .catch((error) => {
+        console.log('Error: ', error)
+    }); */
 
-$('#button').click(function () {
-    $("#show").append(`
-        <p>Nuestro numero es: ${num}</p>
-        <p>Nuestro toString es: ${num}</p>
-        <p>Nuestro Number es: ${num}</p>
-        <p>Nuestro parseInt es: ${num}</p>
-        <p>Nuestro parseFloat es: ${num}</p>
-        `)
+/* profe */
+/* const promesa1 = async () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Promesa 1");
+        }, 1000);
+    });
+};
+
+const promesa2 = async () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Promesa 2");
+        }, 1500);
+    });
+};
+
+const promesa3 = async () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            reject("Promesa 3");
+        }, 500);
+    });
+};
+
+let solicitud1 = promesa1();
+let solicitud2 = promesa2();
+let solicitud3 = promesa3();
+let arraySolicitudes = [solicitud1, solicitud2, solicitud3];
+
+Promise.race(arraySolicitudes)
+    .then((respuestas) => {
+        console.log(respuestas);
+    })
+    .catch((error) => {
+        console.log("Error: ", error);
+    }); */
+
+
+const getPokemon = async(id)=>{
+    let urlBase = 'https://pokeapi.co/api/v2/pokemon/';
+    let response = await fetch(urlBase+id);
+    let pokemon = await response.json();
+    return pokemon;
+};
+
+/* let pokemon1 = getPokemon(5);
+pokemon1.then((pokemon)=>{
+    console.log(pokemon.name)
 }) */
 
-/* let date = new Date()
-let hour = date.getHours()
-let minutes = date.getMinutes()
-console.log(`${hour}:${minutes} hrs`)
+let pokemon1 = getPokemon(5);
+let pokemon2 = getPokemon(10);
+let pokemon3 = getPokemon(15);
 
-
-let day = date.getDate()
-let month = date.getMonth() + 1
-let year = date.getFullYear()
-console.log(`${day}/${month}/${year}`) */
-
-// Ejercicio edad
-
-/* Fecha nacimiento */
-
-/* let nacimiento = moment('1988-09-22');
-
-let nacimientoDiv = document.getElementById('nacimiento');
-
-nacimientoDiv.innerHTML = nacimiento.format('LL'); */
-
-/* Calculo edad */
-
-/* let edadDiv = document.getElementById('edad');
-
-let edad = moment().diff(nacimiento, 'days');
-
-edadDiv.innerHTML = edad; */
-
-/* let inputUser = parseInt(prompt('por favor ingrese un numero'))
-var mod = inputUser % 2 */
-/* alert(mod)
-if(inputUser % 2 === 0){    
-    if(inputUser === 0){
-        alert('su numero es 0')
-        return
-    }        
-    alert('su numero es par')
-}else{
-    alert('su numero es inpar')    
-} */
-
-/* par inpar */
-/* if(inputUser === 0) {
-
-     alert("su número es 0")
-    
-    }else if (inputUser % 2 === 0){
-    
-     alert("su número es par")
-    
-    }else{
-    
-    alert("su número es impar")
-    
-    } */
-
-/* diferencia entre 2 numeros */
-/* let numero1 = parseInt(prompt('ingrese un numero'))
-let numero2 = parseInt(prompt('ingrese un numero')) */
-
-/* if(numero1===numero2){
-    alert('son iguales')
-}else if(numero1<numero2){
-    alert(`${numero2} es mayor`)
-}else{
-    alert(numero1, ' es mayor')
-} */
-
-/* otra solucion */
-/* let max = Math.max(numero1, numero2)
-let min = Math.min(numero1, numero2) */
-
-/* alert("Para calucular la difereccia entre dos número a continuación ingrese cada uno de ellos");
-
-if (numero1 > numero2) {
-alert("La diferencia es: " + (numero1 - numero2))
-
-} else if (numero1 == numero2) {
-alert("Los número son iguales")
-}
-
-else {
-alert("La diferencia es: " + (numero2 - numero1))
-} */
+let arrayPeticiones = [pokemon1, pokemon2, pokemon3];
+Promise.race(arrayPeticiones).then((respuesta)=>{
+    console.log(respuesta.name);
+});
