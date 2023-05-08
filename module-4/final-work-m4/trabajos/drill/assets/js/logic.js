@@ -4,7 +4,6 @@ let countPrincipal = 1;
 let countSecundario = 6;
 let countOtros = 11;
 
-
 // capturamos el mouse y vemos de donde fue llamada la funcion para luego entregar los datos 
 // que corresponden
 const mouseOver = (id, location, color) => {
@@ -18,7 +17,7 @@ const mouseOver = (id, location, color) => {
         }
     } else if (id == 'overSecundario') {
         if (countSecundario < 11) {
-            generator(countPrincipal, id, location, color).next()
+            generator(countSecundario, id, location, color).next()
             countSecundario++
         } else {
             $('div').remove(`.${id}`)
@@ -26,7 +25,7 @@ const mouseOver = (id, location, color) => {
         }
     } else if (id == 'overOtros') {
         if (countOtros < 16) {
-            generator(countPrincipal, id, location, color).next()
+            generator(countOtros, id, location, color).next()
             countOtros++
         } else {
             $('div').remove(`.${id}`)
@@ -36,47 +35,46 @@ const mouseOver = (id, location, color) => {
 }
 
 // clase que guardara los datos del personaje
-class Character{
-    constructor(name, height, weight,){
+class Character {
+    constructor(name, height, weight) {
         this.name = name;
-        this.height = height;   
+        this.height = height;
         this.weight = weight;
     }
 }
 
 // clase que hereda desde Character y suma datos para crear el objeto que manejaremos finalmente
-class ObjToSearch extends Character{
-    constructor(name, height, weight, id, location, color) {   
+class ObjToSearch extends Character {
+    constructor(name, height, weight, id, location, color) {
         super(name, height, weight);
         this.id = id;
         this.location = location;
         this.color = color;
-        }
+    }
 }
 
+
 // generador solicitado que llama a nuestro fecher
-function* generator (i, id, location, color){
-    while(true){ 
+function* generator(i, id, location, color) {
+    while (true) {
         yield fetcher(i, id, location, color)
     }
 }
 
-
 // capturamos nuestra info desde la api
 const fetcher = async (i, id, location, color) => {
     let url = 'https://swapi.dev/api/people/' + i;
-    try{
+    try {
         await $.get(url, (data, status) => {
             builder(data, id, location, color)
         })
-    }
-    catch{
+    } catch {
         console.log('error ', error)
     }
 }
 
 //construimos nuestro objeto
-const builder = (data, id, location, color)=>{
+const builder = (data, id, location, color) => {
     let person = new ObjToSearch(data.name, data.height, data.mass, id, location, color)
     printer(person)
 }
@@ -97,7 +95,3 @@ const printer = (person) => {
         </div>
     `)
 }
-
-
-
-
