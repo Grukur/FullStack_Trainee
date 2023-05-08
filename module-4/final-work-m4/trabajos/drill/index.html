@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,18 +21,30 @@
     <!-- Icon -->
     <link rel="icon" href="./assets/img/helmet1.jpg">
     <title>Star Wars App</title>
-    <title>Final Drilling</title>
 </head>
 
 <body>
+    <nav class="navbar bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="https://starwars.fandom.com/es/wiki/Portada">
+                <img src="./assets/img/Star_Wars_Logo.svg" alt="Logo" width="120" height="60"
+                    class="d-inline-block align-text-top">
+            </a>
+        </div>
+    </nav>
+    <div class="d-flex mb-3">
+        <img src="./assets/img/footer.jpg" width="100%" height="200px" style="object-fit: cover; object-position: 100% 75%;">
+    </div>
 
     <section class="timeline_area section_padding_130">
+        <div class="d-flex">
+            <img class="m-auto" src="./assets/img/generatedtext.jpg" width="900px">
+        </div>
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-sm-8 col-lg-6">
                     <!-- Section Heading-->
-                    <div class="section_heading text-center">
-                        <h3>Dimensiones de la vida real de los personajes de Star Wars.</h3>
+                    <div class="section_heading m-auto">
                         <div class="line"></div>
                     </div>
                 </div>
@@ -49,14 +60,18 @@
                                 <p>1 - 5</p>
                             </div>
                             <div id="fetchPrincipal" class="row firstRow">
-                                <div id="overPrincipal" class="col-12 col-md-6 col-lg-4" onmouseenter="mouseOver(id, 'fetchPrincipal', 'salmon')">
-                                    <div class="single-timeline-content d-flex wow fadeInLeft 2021" data-wow-delay="0.3s"
+                                <div id="overPrincipal" class="col-12 col-md-6 col-lg-4"
+                                    onmouseenter="mouseOver(id, 'fetchPrincipal', 'salmon')">
+                                    <div class="single-timeline-content d-flex wow fadeInLeft 2021"
+                                        data-wow-delay="0.3s"
                                         style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
-                                        <div class="timeline-icon" style="background-color: salmon;"><i class="fa fa-address-card" aria-hidden="true"></i>
+                                        <div class="timeline-icon" style="background-color: salmon;"><i
+                                                class="fa fa-address-card" aria-hidden="true"></i>
                                         </div>
                                         <div class="timeline-text">
                                             <h6>En esta sección...</h6>
-                                            <p>Encontrarás información sobre los personajes más populares de las películas.</p>
+                                            <p>Encontrarás información sobre los personajes más populares de las
+                                                películas.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -69,10 +84,12 @@
                                 <p>6 - 11</p>
                             </div>
                             <div id="fetchSecundario" class="row secondRow">
-                                <div id="overSecundario" class="col-12 col-md-6 col-lg-4" onmouseenter="mouseOver(id, 'fetchSecundario', 'lightgreen')">
+                                <div id="overSecundario" class="col-12 col-md-6 col-lg-4"
+                                    onmouseenter="mouseOver(id, 'fetchSecundario', 'lightgreen')">
                                     <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s"
                                         style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
-                                        <div class="timeline-icon" style="background-color: lightgreen;"><i class="fa fa-briefcase" aria-hidden="true"></i>
+                                        <div class="timeline-icon" style="background-color: lightgreen;"><i
+                                                class="fa fa-briefcase" aria-hidden="true"></i>
                                         </div>
                                         <div class="timeline-text">
                                             <h6>En esta sección...</h6>
@@ -89,10 +106,12 @@
                                 <p>12 - 17</p>
                             </div>
                             <div id="fetchOtros" class="row thirdRow">
-                                <div id="overOtros" class="col-12 col-md-6 col-lg-4" onmouseenter="mouseOver(id, 'fetchOtros', 'lightskyblue')">
+                                <div id="overOtros" class="col-12 col-md-6 col-lg-4"
+                                    onmouseenter="mouseOver(id, 'fetchOtros', 'lightskyblue')">
                                     <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s"
                                         style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
-                                        <div class="timeline-icon" style="background-color: lightskyblue;"><i class="fa fa-id-card" aria-hidden="true"></i>
+                                        <div class="timeline-icon" style="background-color: lightskyblue;"><i
+                                                class="fa fa-id-card" aria-hidden="true"></i>
                                         </div>
                                         <div class="timeline-text">
                                             <h6>En esta sección...</h6>
@@ -107,6 +126,18 @@
             </div>
         </div>
     </section>
+
+
+    <div class="d-flex my-3">
+        <iframe class="m-auto" width="632" height="357" src="https://www.youtube.com/embed/D5dXE7t73BY"
+            title="Star Wars Battlefront 2: Starfighter Assault Gameplay (No Commentary)"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+    </div>
+
+    <div>
+        <img src="./assets/img/banner.jpg" width="100%" height="200px" style="object-fit: cover; object-position: 100% 75%;">
+    </div>
+
 </body>
 
 </html>
