@@ -16,17 +16,97 @@
     <!-- moment -->
     <script defer src="./assets/vendors/moment.js"></script>
     <!-- Script of own -->
-    <script defer src="./assets/js/script.js"></script>
+    <script defer src="./assets/js/logic.js"></script>
     <!-- Style -->
     <link rel="stylesheet" href="./assets/css/styles.css">
     <!-- Icon -->
     <link rel="icon" href="./assets/img/helmet1.jpg">
     <title>Star Wars App</title>
+    <title>Final Drilling</title>
 </head>
 
 <body>
-    
 
+    <section class="timeline_area section_padding_130">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-8 col-lg-6">
+                    <!-- Section Heading-->
+                    <div class="section_heading text-center">
+                        <h3>Dimensiones de la vida real de los personajes de Star Wars.</h3>
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <!-- Timeline Area-->
+                    <div class="apland-timeline-area">
+                        <!-- Single Timeline Content-->
+                        <div class="single-timeline-area">
+                            <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s"
+                                style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                                <p>1 - 5</p>
+                            </div>
+                            <div id="fetchPrincipal" class="row firstRow">
+                                <div id="overPrincipal" class="col-12 col-md-6 col-lg-4" onmouseenter="mouseOver(id, 'fetchPrincipal', 'salmon')">
+                                    <div class="single-timeline-content d-flex wow fadeInLeft 2021" data-wow-delay="0.3s"
+                                        style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                        <div class="timeline-icon" style="background-color: salmon;"><i class="fa fa-address-card" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="timeline-text">
+                                            <h6>En esta sección...</h6>
+                                            <p>Encontrarás información sobre los personajes más populares de las películas.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Timeline Content-->
+                        <div class="single-timeline-area">
+                            <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s"
+                                style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                                <p>6 - 11</p>
+                            </div>
+                            <div id="fetchSecundario" class="row secondRow">
+                                <div id="overSecundario" class="col-12 col-md-6 col-lg-4" onmouseenter="mouseOver(id, 'fetchSecundario', 'lightgreen')">
+                                    <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s"
+                                        style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                        <div class="timeline-icon" style="background-color: lightgreen;"><i class="fa fa-briefcase" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="timeline-text">
+                                            <h6>En esta sección...</h6>
+                                            <p>Encontrarás información sobre personajes secundarios importantes.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Timeline Content-->
+                        <div class="single-timeline-area">
+                            <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s"
+                                style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                                <p>12 - 17</p>
+                            </div>
+                            <div id="fetchOtros" class="row thirdRow">
+                                <div id="overOtros" class="col-12 col-md-6 col-lg-4" onmouseenter="mouseOver(id, 'fetchOtros', 'lightskyblue')">
+                                    <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s"
+                                        style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                        <div class="timeline-icon" style="background-color: lightskyblue;"><i class="fa fa-id-card" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="timeline-text">
+                                            <h6>En esta sección...</h6>
+                                            <p>Encontrarás otros personajes significativos.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>
