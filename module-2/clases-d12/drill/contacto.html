@@ -13,15 +13,13 @@
         crossorigin="anonymous"></script>
     <!-- JQuery -->
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <!-- Canvas -->
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- Page Icon -->
+    <!-- Page Image -->
     <link rel="icon" href="./assets/img/n.jpg"> <!-- Image in title bar -->
     <!-- Styles -->
     <link rel="stylesheet" href="./assets/css/style-index.css">
-    <!-- js -->
+    <!-- Own Script -->
     <script defer src="./assets/js/logic.js"></script>
-    <title>NIMRODEL Restaurant y Pub</title>
+    <title>NIMRODEL Contacto</title>
 </head>
 
 <!-- NavBar -->
@@ -52,57 +50,9 @@
 </nav>
 
 <body>
-    <!-- Titles -->
-    <h1 class="mt-3">Nimrodel Pub Restaurant</h1>
-    <div class="mt-5 text-center container-sm container-xl">
-        <h2>Destacados de la semana</h2>
-    </div>
-
-    <!-- Products -->
-    <!-- Frame for pop ups -->
-    <div id="image-pop-up" class="mt-5 text-center">
-        <h2 class="fs-3" id="popTitle"></h2>
-        <p class="fs-4" id="popInfo"></p>            
-        <img id="popImg" src="" alt="">
-    </div>
-
-    <div class="my-5 container container-sm container-xl">
-        <!-- Card -->
-        <div class="card m-1 pop">
-            <img src="./assets/img/bebidas.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">GASEOSAS</h5>
-                <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk
-                    of the
-                    card's
-                    content.</p>
-            </div>
-        </div>
-        <div class="card m-1 pop">
-            <img src="./assets/img/tablas.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">TABLAS</h5>
-                <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk
-                    of the
-                    card's
-                    content.</p>
-            </div>
-        </div>
-        <div class="card m-1 pop">
-            <img src="./assets/img/shop.jpeg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">SHOPCERVEZA</h5>
-                <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk
-                    of the
-                    card's
-                    content.</p>
-            </div>
-        </div>
-    </div>
-
     <!-- Contact form -->
-    <div class="mt-4 container-sm container-xl" id="contact-form">
-        <form name="contactoForm" action="" method="get" onsubmit="exitoContacto()">
+    <div class="mt-4 container-sm container-xl" id="contact-form-page">
+        <form name="contactoForm" action="" method="get">
             <div class="bg-dark px-3 text-light rounded">
                 <h5 class="mb-3 pt-3">Comuniquemonos</h5>
                 <div class="mb-3 text-center">
@@ -166,15 +116,13 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-
 </body>
 
 <!-- Footer -->
 <footer>
-    <div class="footer1">
+    <div class="footerFrom">
         <div class="pt-3">
-            <button><a href="reserve.html">Reservas</a></button>
-            <button><a href="#upper">Inicio</a></button>
+            <button class="btn btn-primary"><a href="./index.html" class="btn btn-primary">Volver</a></button>
             <p>Todos los derechos reservados
                 <img style="display: inline-block; height: 100%; vertical-align: middle;"
                     src="./assets/img/download.jfif" alt="" width="15">
