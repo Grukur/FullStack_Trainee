@@ -4,21 +4,13 @@ let countPrincipal = 1;
 let countSecundario = 6;
 let countOtros = 11;
 
-// no logro entender bien como manejar el generador
-/* function* generator (id, location, color){
-    console.log('hello')
-    while(true){
-        mouseOver(id, location, color)
-        yield console.log('error?')
-    }
-} */
 
 // capturamos el mouse y vemos de donde fue llamada la funcion para luego entregar los datos 
 // que corresponden
 const mouseOver = (id, location, color) => {
     if (id == 'overPrincipal') {
         if (countPrincipal < 6) {
-            fetcher(countPrincipal, id, location, color)
+            generator(countPrincipal, id, location, color).next()
             countPrincipal++
         } else {
             $('div').remove(`.${id}`)
@@ -26,7 +18,7 @@ const mouseOver = (id, location, color) => {
         }
     } else if (id == 'overSecundario') {
         if (countSecundario < 11) {
-            fetcher(countSecundario, id, location, color)
+            generator(countPrincipal, id, location, color).next()
             countSecundario++
         } else {
             $('div').remove(`.${id}`)
@@ -34,7 +26,7 @@ const mouseOver = (id, location, color) => {
         }
     } else if (id == 'overOtros') {
         if (countOtros < 16) {
-            fetcher(countOtros, id, location, color)
+            generator(countPrincipal, id, location, color).next()
             countOtros++
         } else {
             $('div').remove(`.${id}`)
@@ -61,6 +53,14 @@ class ObjToSearch extends Character{
         this.color = color;
         }
 }
+
+// generador solicitado que llama a nuestro fecher
+function* generator (i, id, location, color){
+    while(true){ 
+        yield fetcher(i, id, location, color)
+    }
+}
+
 
 // capturamos nuestra info desde la api
 const fetcher = async (i, id, location, color) => {
