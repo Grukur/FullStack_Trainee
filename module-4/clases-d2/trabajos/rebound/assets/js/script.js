@@ -25,39 +25,42 @@ class Cuentas {
         this.pass = pass;
     }
     mostrarInfo() {
-        if (validador > 0) {
-            $('#modalTitle').text(`Bienvenido ${this.name}`)
-            $('#modalBody').text(`Nombre: ${this.name} Email: ${this.email} Contraseña ${this.pass}`)
-            $('#myModal').modal('show')
-        } else {
-            alert('Por favor acepter los terminos y condiciones')
-        }
+        $('#modalTitle').text(`Bienvenido ${this.name}`)
+        $('#modalBody').text(`Nombre: ${this.name} Email: ${this.email} Contraseña ${this.pass}`)
+        $('#myModal').modal('show')
     }
 };
-
-const validaCheckBox = () => {
-    if (checkSign.checked == true || checkVip.checked == true) {
-
-    } else if (checkSign.checked != true || checkVip.checked != true) {
-        
-    }
-}
 
 class Vip extends Cuentas {
     constructor(name, email, pass) {
         super(name, email, pass)
     }
-
-    mostrarInfo() {
-        if (validador > 0) {
-            $('#modalTitle').text(`Bienvenido ${this.name}`)
-            $('#modalBody').text(`Nombre: ${this.name} Email: ${this.email} Contraseña ${this.pass}`)
-            $('#myModal').modal('show')
-        } else {
-            alert('Por favor acepter los terminos y condiciones')
-        }
-    }
 };
+
+const normalCheckBox = (user) => {
+    if (checkSign.checked == true) {
+        user.mostrarInfo()
+    }else{
+        alert('por favor acepte nuestros terminos y condiciones')
+    }
+}
+const vipCheckBox = (user) => {
+    if (checkVip.checked == true) {
+        user.mostrarInfo()
+    }else{
+        alert('por favor acepte nuestros terminos y condiciones')
+    }
+}
+
+const constructor = (name, email, pass)=>{
+    let user = new Cuentas(name, email, pass)
+    return user
+}
+
+const vipConstructor = (name, email, pass)=>{
+    let user = new Cuentas(name, email, pass)
+    return user
+}
 
 $('#btnSign').click((event) => {
     event.preventDefault()
@@ -66,10 +69,10 @@ $('#btnSign').click((event) => {
     let nameId = email.split('@')
     let id = Math.floor(Math.random() * 500)
     let name = nameId[0] + id
-    let user = new Cuentas(name, email, pass)
+    let user = constructor(name, email, pass)
     mortalUsers.push(user)
-    user.mostrarInfo()
-    validador = 0
+    normalCheckBox(user)
+    /* user.mostrarInfo() */
 });
 
 $('#btnVip').click((event) => {
@@ -77,9 +80,9 @@ $('#btnVip').click((event) => {
     let name = $('#nameVip').val()
     let email = $('#emailVip').val()
     let pass = $('#passVip').val()
-    let user = new Vip(name, email, pass)
+    let user = vipConstructor(name, email, pass)
     vipUsers.push(user)
-    user.mostrarInfo()
-    validador = 0
+    vipCheckBox(user)
+    /* user.mostrarInfo() */
 });
 

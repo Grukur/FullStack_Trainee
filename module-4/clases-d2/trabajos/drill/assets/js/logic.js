@@ -10,8 +10,8 @@ $('#btn').click(function (event) {
 
 class WorkTime {
     constructor(semanas, dias) {
-        this.semanas = semanas
-        this.dias = dias
+        this.semanas = semanas;
+        this.dias = dias;
     }
     totalDias() {
         return (this.semanas * this.dias)
