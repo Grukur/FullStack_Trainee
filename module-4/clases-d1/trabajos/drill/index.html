@@ -31,21 +31,38 @@
             <div class="row g-3">
                 <div class="col text-start">
                     <label for="inputEmail4" class="form-label">Nombre*</label>
-                    <input type="text" class="form-control" placeholder="First name">
+                    <input type="text" class="form-control" placeholder="Nombre">
                 </div>
                 <div class="col text-start">
                     <label for="inputEmail4" class="form-label">Apellido*</label>
-                    <input type="text" class="form-control" placeholder="Last name">
-                </div>
+                    <input type="text" class="form-control" placeholder="Last nameApellido">
             </div>
+        </div>
             <div class="row g-3">
                 <div class="col text-start">
                     <label for="inputEmail4" class="form-label">Email*</label>
-                    <input type="text" class="form-control" placeholder="First name">
+                    <input type="text" class="form-control" placeholder="Email">
                 </div>
                 <div class="col text-start">
                     <label for="inputEmail4" class="form-label">Por favor especifique el motivo*</label>
-                    <input type="dropdown" class="form-control" placeholder="Last name">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Dropdown button
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                      </div>
+                </div>
+                <label for="inputEmail4" class="form-label text-start">Mensaje*</label>
+                <div class="form-floating">                    
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                        style="height: 100px"></textarea>
+                </div>
+                <div class="m-auto">
+                    <button type="button" class="btn btn-success w-75 mt-3">Success</button>
                 </div>
             </div>
         </div>
