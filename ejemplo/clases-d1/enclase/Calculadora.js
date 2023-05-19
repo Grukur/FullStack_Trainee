@@ -1,3 +1,5 @@
+
+
 const venta1 = {
     precio: 20000,
     nombre: 'alados',
@@ -7,3 +9,6 @@ const venta1 = {
 }
 
 venta1.imprimir(venta1)
+
+let mat = new Date
+console.log(mat.now())
