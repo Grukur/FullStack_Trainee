@@ -1,0 +1,56 @@
+Server [localhost]:
+Database [postgres]:
+Port [5432]:
+Username [postgres]:
+Contraseña para usuario postgres:
+psql (15.2)
+ADVERTENCIA: El código de página de la consola (437) difiere del código
+            de página de Windows (1252).
+            Los caracteres de 8 bits pueden funcionar incorrectamente.
+            Vea la página de referencia de psql «Notes for Windows users»
+            para obtener más detalles.
+Digite «help» para obtener ayuda.
+
+postgres=# CREATE DATABASE base1;
+CREATE DATABASE
+postgres=# CREATE USER anomalo PASSWORD 123456;
+ERROR:  error de sintaxis en o cerca de «123456»
+LINEA 1: CREATE USER anomalo PASSWORD 123456;
+                                      ^
+postgres=# CREATE USER anomalo PASSWORD '123456';
+CREATE ROLE
+postgres=# \l
+                                                              Listado de base de datos
+    Nombre     |  Due±o   | Codificaci≤n |      Collate       |       Ctype        | configuraci≤n ICU | Proveedor de locale |      Privilegios
+---------------+----------+--------------+--------------------+--------------------+-------------------+---------------------+-----------------------
+ base1         | postgres | UTF8         | Spanish_Spain.1252 | Spanish_Spain.1252 |                   | libc                |
+ db_prueba     | postgres | UTF8         | Spanish_Spain.1252 | Spanish_Spain.1252 |                   | libc
+     |
+ db_prueba2    | postgres | UTF8         | Spanish_Spain.1252 | Spanish_Spain.1252 |                   | libc
+     |
+ m5_d1_ejemplo | postgres | UTF8         | Spanish_Spain.1252 | Spanish_Spain.1252 |                   | libc
+     | =Tc/postgres         +
+               |          |              |                    |                    |                   |
+     | postgres=CTc/postgres+
+               |          |              |                    |                    |                   |
+     | grukur=CTc/postgres
+ postgres      | postgres | UTF8         | Spanish_Spain.1252 | Spanish_Spain.1252 |                   | libc
+     |
+ template0     | postgres | UTF8         | Spanish_Spain.1252 | Spanish_Spain.1252 |                   | libc
+     | =c/postgres          +
+               |          |              |                    |                    |                   |
+     | postgres=CTc/postgres
+ template1     | postgres | UTF8         | Spanish_Spain.1252 | Spanish_Spain.1252 |                   | libc
+     | =c/postgres          +
+               |          |              |                    |                    |                   |
+     | postgres=CTc/postgres
+(7 filas)
+
+
+postgres=#
+postgres=#
+postgres=#
+postgres=# \c base1 anomalo;
+Contraseña para usuario anomalo:
+Ahora está conectado a la base de datos «base1» con el usuario «anomalo».
+base1=>

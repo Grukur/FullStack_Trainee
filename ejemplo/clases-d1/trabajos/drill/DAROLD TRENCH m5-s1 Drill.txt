@@ -1,0 +1,59 @@
+Server [localhost]:
+Database [postgres]:
+Port [5432]:
+Username [postgres]:
+Contraseña para usuario postgres:
+psql (15.2)
+ADVERTENCIA: El código de página de la consola (437) difiere del código
+            de página de Windows (1252).
+            Los caracteres de 8 bits pueden funcionar incorrectamente.
+            Vea la página de referencia de psql «Notes for Windows users»
+            para obtener más detalles.
+Digite «help» para obtener ayuda.
+
+postgres=# CREATE DATABASE nuevo_curso;
+CREATE DATABASE
+postgres=# CREATE USER usuario1 PASSWORD '1';
+CREATE ROLE
+postgres=# CREATE USER usuario2 PASSWORD '2';
+CREATE ROLE
+postgres=# CREATE USER usuario3 PASSWORD '3';
+CREATE ROLE
+postgres=# \l
+                                                              Listado de base de datos
+    Nombre     |  Due±o   | Codificaci≤n |      Collate       |       Ctype        | configuraci≤n ICU | Proveedor de locale |      Privilegios
+---------------+----------+--------------+--------------------+--------------------+-------------------+---------------------+-----------------------
+ db_prueba     | postgres | UTF8         | Spanish_Spain.1252 | Spanish_Spain.1252 |                   | libc                |
+ m5_d1_ejemplo | postgres | UTF8         | Spanish_Spain.1252 | Spanish_Spain.1252 |                   | libc
+     | =Tc/postgres         +
+               |          |              |                    |                    |                   |
+     | postgres=CTc/postgres+
+               |          |              |                    |                    |                   |
+     | grukur=CTc/postgres
+ nuevo_curso   | postgres | UTF8         | Spanish_Spain.1252 | Spanish_Spain.1252 |                   | libc
+     |
+ postgres      | postgres | UTF8         | Spanish_Spain.1252 | Spanish_Spain.1252 |                   | libc
+     |
+ template0     | postgres | UTF8         | Spanish_Spain.1252 | Spanish_Spain.1252 |                   | libc
+     | =c/postgres          +
+               |          |              |                    |                    |                   |
+     | postgres=CTc/postgres
+ template1     | postgres | UTF8         | Spanish_Spain.1252 | Spanish_Spain.1252 |                   | libc
+     | =c/postgres          +
+               |          |              |                    |                    |                   |
+     | postgres=CTc/postgres
+(6 filas)
+
+
+postgres=# \c nuevo_curso postgres;
+Ahora está conectado a la base de datos «nuevo_curso» con el usuario «postgres».
+nuevo_curso=# \l nuevo_curso
+                                                        Listado de base de datos
+   Nombre    |  Due±o   | Codificaci≤n |      Collate       |       Ctype        | configuraci≤n ICU | Proveedor de locale | Privilegios
+-------------+----------+--------------+--------------------+--------------------+-------------------+---------------------+-------------
+ nuevo_curso | postgres | UTF8         | Spanish_Spain.1252 | Spanish_Spain.1252 |                   | libc
+   |
+(1 fila)
+
+
+nuevo_curso=#
