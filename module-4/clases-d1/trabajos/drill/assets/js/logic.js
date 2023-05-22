@@ -1,21 +1,13 @@
+/* Guardamos el dropdown */
+let selected
+$('.dropdown-item').on('click', (data)=>{
+    selected = data.currentTarget.text
+})
 
-const celsiusToFahrenheit = (temperature = 1)=>{
-    var nowTemp = (temperature -32) *(5/9)
-    bigFtemp = ($('#bigTemp').text() -32) *(5/9)
-    console.log(bigFtemp)
-    $('#bigTemp').text(bigFtemp)
-
-    return(nowTemp)
-}
-
-const convert = (algo)=>{
-    if($('input').prop('checked') == true){
-        celsiusToFahrenheit()
-    }else{
-        console.log('chao')
-    }
-}
-
-if(true || true){
-    console.log('and')
-}
+/* Creeaos nuestro alert con toda la info */
+$('#btn').on('click', ()=>{
+    alert(`De: ${$('#name').val()} ${$('#last').val()} ${$('#email').val()} \n
+            ASUNTO: ${selected}\n
+            MENSAJE:\n
+            ${$('#message').val()}`)
+})

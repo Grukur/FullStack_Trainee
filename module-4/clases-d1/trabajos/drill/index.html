@@ -16,7 +16,7 @@
     <!-- moment -->
     <script defer src="./assets/vendors/moment.js"></script>
     <!-- Script of own -->
-    <script defer src="./assets/js/script.js"></script>
+    <script defer src="./assets/js/logic.js"></script>
     <!-- Style -->
     <link rel="stylesheet" href="./assets/css/styles.css">
     <!-- Icon -->
@@ -27,42 +27,45 @@
 <body class="container p-5">
     <main class="text-center row">
         <h1 class="fw-bold text-center">Contáctanos</h1>
-        <div class="col-6 m-auto bg-propio border border-secondary p-5">
+        <div class="col-8 m-auto bg-propio border border-secondary p-5">
             <div class="row g-3">
                 <div class="col text-start">
                     <label for="inputEmail4" class="form-label">Nombre*</label>
-                    <input type="text" class="form-control" placeholder="Nombre">
+                    <input id="name" type="text" class="form-control" placeholder="Nombre">
                 </div>
                 <div class="col text-start">
                     <label for="inputEmail4" class="form-label">Apellido*</label>
-                    <input type="text" class="form-control" placeholder="Last nameApellido">
+                    <input id="last" type="text" class="form-control" placeholder="Apellido">
+                </div>
             </div>
-        </div>
             <div class="row g-3">
                 <div class="col text-start">
                     <label for="inputEmail4" class="form-label">Email*</label>
-                    <input type="text" class="form-control" placeholder="Email">
+                    <input id="email" type="text" class="form-control" placeholder="Email">
                 </div>
                 <div class="col text-start">
                     <label for="inputEmail4" class="form-label">Por favor especifique el motivo*</label>
                     <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Dropdown button
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown button
                         </button>
                         <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">Action</a></li>
-                          <li><a class="dropdown-item" href="#">Another action</a></li>
-                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item disabled" href="#">--Seleccione--</a></li>
+                            <li><a class="dropdown-item" href="#">Problemas con su Cuenta Online</a></li>
+                            <li><a class="dropdown-item" href="#">Restablecer Contraseña</a></li>
+                            <li><a class="dropdown-item" href="#">Solcicitud de Atencion al Cliente</a></li>
+                            <li><a class="dropdown-item" href="#">Otro</a></li>
                         </ul>
-                      </div>
+                    </div>
                 </div>
                 <label for="inputEmail4" class="form-label text-start">Mensaje*</label>
-                <div class="form-floating">                    
-                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                <div class="form-floating">
+                    <textarea id="message" class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
                         style="height: 100px"></textarea>
                 </div>
                 <div class="m-auto">
-                    <button type="button" class="btn btn-success w-75 mt-3">Success</button>
+                    <button id="btn" type="button" class="btn btn-success w-75 mt-3">Success</button>
                 </div>
             </div>
         </div>

@@ -1,21 +1,21 @@
 
-const celsiusToFahrenheit = (temperature = 1)=>{
-    var nowTemp = (temperature -32) *(5/9)
-    bigFtemp = ($('#bigTemp').text() -32) *(5/9)
-    console.log(bigFtemp)
-    $('#bigTemp').text(bigFtemp)
+$('button').on('click', (event)=>{
+    event.preventDefault();
+    console.log(`
+    Para: ${$('#for').val()}\n
+    Titulo: ${$('#title').val()}\n
+    Mensaje: ${$('#msg').val()}\n
+    From: ${$('#remitent').val()}\n                
+    `)
+    let copys = copies(email_1.value, email_2.value, 
+                        email_3.value, email_4.value, 
+                        email_5.value, email_6.value)
+})
 
-    return(nowTemp)
-}
-
-const convert = (algo)=>{
-    if($('input').prop('checked') == true){
-        celsiusToFahrenheit()
-    }else{
-        console.log('chao')
+const copies = (...copys)=>{
+    for(let i of copys ){
+        if(!i == ''){
+            console.log(i)
+        }
     }
-}
-
-if(true || true){
-    console.log('and')
 }

@@ -16,17 +16,49 @@
     <!-- moment -->
     <script defer src="./assets/vendors/moment.js"></script>
     <!-- Script of own -->
-    <script defer src="./assets/js/script.js"></script>
+    <script defer src="./assets/js/logic.js"></script>
     <!-- Style -->
     <link rel="stylesheet" href="./assets/css/styles.css">
     <!-- Icon -->
     <link rel="icon" href="./assets/img/worker.png">
-    <title>Rebound m3 s5</title>
+    <title>drill m4 s3</title>
 </head>
 
 <body>
-    
-
+    <main class="conatiner p-2 row">
+        <div>
+            <form class="bgOwn p-3 col-8 m-auto">
+                <div class="form-group d-flex form-row align-items-center">
+                  <label for="formGroupExampleInput">Para:</label>
+                  <input type="text" class="form-control mx-3 bgOwn" id="for" placeholder="Email destinatario">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control bgOwn fw-bold" id="title" placeholder="Titulo">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control bgOwn" id="msg" placeholder="Mensaje">
+                  </div>
+                  <div class="form-group d-flex form-row align-items-center">
+                    <label for="formGroupExampleInput">De:</label>
+                    <input type="text" class="form-control mx-3 bgOwn" id="remitent" placeholder="Email remitente">
+                  </div>
+                  <div class="form-row align-items-center">
+                    <label for="formGroupExampleInput">CC:</label>
+                    <div id="ccs" class="row">
+                        <input type="text" class="form-control mx-3 bgOwn w-25" id="email_1" placeholder="Emails">
+                        <input type="text" class="form-control mx-3 bgOwn w-25" id="email_2" placeholder="Emails">
+                        <div class="w-100"></div>
+                        <input type="text" class="form-control mx-3 bgOwn w-25" id="email_3" placeholder="Emails">
+                        <input type="text" class="form-control mx-3 bgOwn w-25" id="email_4" placeholder="Emails">
+                        <div class="w-100"></div>
+                        <input type="text" class="form-control mx-3 bgOwn w-25" id="email_5" placeholder="Emails">
+                        <input type="text" class="form-control mx-3 bgOwn w-25" id="email_6" placeholder="Emails">
+                    </div>
+                  </div>
+                  <button class="px-4">Enviar</button>                
+              </form>
+        </div>
+    </main>
 </body>
 
 </html>
