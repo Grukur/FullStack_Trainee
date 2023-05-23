@@ -1,17 +1,29 @@
-function mostrarHora() { 
-    let fecha = new Date(); 
-    let hora = formatoDato(fecha.getHours()); 
-    let minutos = formatoDato(fecha.getMinutes()); 
-    let segundos = formatoDato(fecha.getSeconds()); 
-    document.getElementById("reloj").innerText = `${hora}:${minutos}:${segundos}`; 
-} 
 
-function formatoDato(valor) { 
-    if (valor < 10) { 
-        return "0" + valor 
-    } return valor; 
-} 
+const blue = () => {
+    $('#discount').toggleClass('blues')
+}
 
-let reloj = setInterval(mostrarHora, 1000); 
-document.getElementById("accion").addEventListener("click", function () { console.log("hicimos un click!") }) 
+const green = () => {
+    $('#discount').toggleClass('greens')
 
+}
+
+const oneClick = () => {
+    $('#btn').removeClass('bg-danger')
+    $('#btn').addClass('oneClicks')
+    $('#btn').text('Estas Seguro?')
+}
+
+const twoClick = () => {
+    $('#btn').removeClass('oneClicks' && 'bg-danger')
+    $('#btn').toggleClass('twoClicks')
+    $('#btn').text('OK!')
+}
+
+const leave = () => {
+    console.log('hola')
+    $('#btn').removeClass('oneClicks' && 'bg-danger' && 'twoClicks')
+    $('#btn').addClass('leaves')
+    $('#btn').text('Comprado!')
+
+}

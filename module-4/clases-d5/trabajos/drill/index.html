@@ -8,24 +8,61 @@
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- Jquery -->
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
-    <!-- Jquery -->
-    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <!-- moment -->
     <script defer src="./assets/vendors/moment.js"></script>
     <!-- Script of own -->
-    <script defer src="./assets/js/script.js"></script>
+    <script defer src="./assets/js/logic.js"></script>
     <!-- Style -->
     <link rel="stylesheet" href="./assets/css/styles.css">
     <!-- Icon -->
     <link rel="icon" href="./assets/img/worker.png">
-    <title>Rebound m3 s5</title>
+    <title>Rebound m4 s5</title>
 </head>
 
-<body>
-    
+<body class="bg-black">
+    <nav class="navbar bg-dark">
+        <div class="d-flex m-auto text-danger">
+            <img class="m-2" src="./assets/img/diamond.png" alt="Bootstrap" width="40">
+            <h2 class="m-2">Ice Grear</h2>
+            <img class="m-2" src="./assets/img/diamond.png" alt="Bootstrap" width="40">
+        </div>
+    </nav>
+
+    <main class="container-fluid">
+        <div class="container text-center" id="searchBox">
+            <h1>Stock de productos</h1>
+            <!-- 1st -->
+            <div id="caja1" class="form col-xs-12 first d-flex justify-content-between">
+                <label for="search">En esta tienda</label>
+                <input class="col-xs-9 text-center" type="text" placeholder="Buscar" />
+                <img id="lens1"  src="./assets/img/lupa.png" width="40">
+            </div>
+            <br>
+            <!-- 2nd -->
+            <div id="caja2" class="form col-xs-12 second d-flex justify-content-between">
+                <label for="search">En otras tiendas</label>
+                <input class="col-xs-9 text-center" type="text" placeholder="Buscar" />
+                <img id="lens2"  src="./assets/img/lupa.png" width="40">
+            </div>
+            <br>
+            <!-- 3rd -->
+            <div id="caja3" class="form col-xs-12 third d-flex justify-content-between">
+                <label for="search">Online</label>
+                <input class="col-xs-9 text-center" type="text" placeholder="Buscar" />
+                <img id="lens3"  src="./assets/img/lupa.png" width="40">
+            </div>
+        </div>
+    </main>
+
+    <div id="mainBody" class="container text-center">
+        <ul id="results">
+        </ul>
+    </div>
 
 </body>
 
