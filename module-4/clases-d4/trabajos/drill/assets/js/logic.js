@@ -1,21 +1,11 @@
 
-const celsiusToFahrenheit = (temperature = 1)=>{
-    var nowTemp = (temperature -32) *(5/9)
-    bigFtemp = ($('#bigTemp').text() -32) *(5/9)
-    console.log(bigFtemp)
-    $('#bigTemp').text(bigFtemp)
+$('input[type=checkbox]').on('click', (data)=>{
+    /* console.log($(`#${data.currentTarget.nextElementSibling.id}`).val()) */
+    let check = data.target.id
+    let job = ($(`#${data.currentTarget.nextElementSibling.id}`))
+    let map = new Map()
+    let maper = map.set(check, job.val())
+    console.log(maper)
+    console.log(check)
 
-    return(nowTemp)
-}
-
-const convert = (algo)=>{
-    if($('input').prop('checked') == true){
-        celsiusToFahrenheit()
-    }else{
-        console.log('chao')
-    }
-}
-
-if(true || true){
-    console.log('and')
-}
+})
